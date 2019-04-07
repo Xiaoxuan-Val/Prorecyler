@@ -2,6 +2,13 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//Database setup
+require('./models/db.js');
+
 app.get('/', function(req,res){
     res.send('F4');
 });
