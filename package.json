@@ -1,0 +1,27 @@
+{
+  "name": "info30005-f4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiaoxuan-Val/INFO30005-F4.git"
+  },
+  "author": "Xiaoxuan Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xiaoxuan-Val/INFO30005-F4/issues"
+  },
+  "homepage": "https://github.com/Xiaoxuan-Val/INFO30005-F4#readme"
+}

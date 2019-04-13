@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var cafeSchema = mongoose.Schema(
+var trashSchema = mongoose.Schema(
     {
         "name": String,
         "type": String,
