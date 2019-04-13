@@ -7,22 +7,27 @@ var controller = require('../controllers/controller.js');
 router.get('/', controller.welcome);
 
 // Create new record
-router.post('/api',controller.createRecord);
+router.post('/bin',controller.createBin);
 
 // Find all records
-router.get('/api',controller.findAllRecords);
+router.get('/bin',controller.findAllBins);
 
 // Find one record by id
-router.get('/api/id/:id',controller.findOneRecord);
+router.get('/bin/id/:id',controller.findOneBin);
 
 //Find one records by name
-router.get('/api/name/:name', controller.findRecordByName);
-
-// Find all trash
-router.get('/trash', controller.findAllTrashs);
+router.get('/bin/address/:address', controller.findBinByAddress);
 
 // Create new trash
 router.post('/trash', controller.createTrash);
 
+// Find all trash
+router.get('/trash', controller.findAllTrashs);
+
+// Find one trash by id
+router.get('/trash/id/:id', controller.findOneTrash);
+
+//Find one trash by name
+router.get('/trash/name/:name', controller.findTrashByName);
 
 module.exports = router;

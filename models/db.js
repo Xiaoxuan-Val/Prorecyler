@@ -7,7 +7,7 @@ const dbURI =
     "mongodb+srv://ChouTatsumi:KeltxajilabB2@cluster0-b5ldm.mongodb.net/test?retryWrites=true"
 const options = {
     useNewUrlParser: true,
-    dbName: "INFO30005"
+    dbName: "INFO30005-F4"
 };
 
 mongoose.connect(dbURI, options).then(
@@ -19,5 +19,5 @@ mongoose.connect(dbURI, options).then(
     }
 );
 
-require('./data.js');
+require('./bin.js');
 require('./trash.js');

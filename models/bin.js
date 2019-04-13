@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var dataSchema = mongoose.Schema(
     {
-        "name":String,
+        "type":String,
         "address":String,
         "distance":String,
         "photo":String
     }
 );
-mongoose.model('data', dataSchema);
+mongoose.model('bin', dataSchema);
