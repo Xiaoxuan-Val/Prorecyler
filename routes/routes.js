@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var controller = require('../controller.js');
+var controller = require('../controllers/controller.js');
 
 // Create new record
 router.post('/api',controller.createRecord);

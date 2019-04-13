@@ -7,4 +7,4 @@ var dataSchema = mongoose.Schema(
         "photo":String
     }
 );
-mongoose.model('data',dataSchema);
+mongoose.model('data', dataSchema);
