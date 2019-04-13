@@ -1,5 +1,10 @@
 var mongoose = require('mongoose');
 var Data = mongoose.model('data');
+var Trash = mongoose.model('trash');
+
+var welcome = function (req, res) {
+    res.send('Welcome! We are group F4.');
+}
 
 var createRecord = function(req,res){
     var record = new Record({
@@ -49,7 +54,35 @@ var findRecordByName = function(req, res){
     });
 };
 
+var createTrash = function (req, res) {
+    var trash = new Trash({
+        "name": req.body.name,
+        "type": req.body.type,
+        "pic": req.body.pic
+    });
+    trash.save(function (err, newTrash) {
+        if (!err) {
+            res.send(newTrash);
+        } else {
+            res.sendStatus(400);
+        }
+    });
+};
+
+var findAllTrashs = function (req, res) {
+    Trash.find(function (err, trash) {
+        if (!err) {
+            res.send(trash);
+        } else {
+            res.sendStatus(404);
+        }
+    });
+};
+
+module.exports.welcome = welcome;
 module.exports.createRecord = createRecord;
 module.exports.findAllRecords = findAllRecords;
 module.exports.findOneRecord = findOneRecord;
 module.exports.findRecordByName = findRecordByName;
+module.exports.findAllTrashs = findAllTrashs;
+module.exports.createTrash = createTrash;

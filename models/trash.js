@@ -9,7 +9,7 @@ var trashSchema = mongoose.Schema(
 mongoose.model('trash', trashSchema);
 
 
-var trash = [
+var trashdata =[
     {
         "name": "glass",
         "type": "recyclable",
@@ -24,5 +24,5 @@ var trash = [
         "name": "orange",
         "type": "nonrecyclable",
         "pic": "https://purepng.com/photo/3317/food-orange"
-    }
-];
+    }]
+;
