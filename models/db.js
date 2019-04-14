@@ -21,3 +21,4 @@ mongoose.connect(dbURI, options).then(
 
 require('./bin.js');
 require('./trash.js');
+require('./tip.js')
