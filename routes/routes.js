@@ -6,16 +6,16 @@ var controller = require('../controllers/controller.js');
 // home page
 router.get('/', controller.welcome);
 
-// Create new record
+// Create new bin
 router.post('/bin',controller.createBin);
 
-// Find all records
+// Find all bins
 router.get('/bin',controller.findAllBins);
 
-// Find one record by id
+// Find one bin by id
 router.get('/bin/id/:id',controller.findOneBin);
 
-//Find one records by name
+//Find one bins by name
 router.get('/bin/address/:address', controller.findBinByAddress);
 
 // Create new trash
