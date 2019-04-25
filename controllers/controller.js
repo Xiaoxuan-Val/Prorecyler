@@ -4,7 +4,7 @@ var Trash = mongoose.model('trashdb');
 var Tip = mongoose.model('tip');
 
 var welcome = function (req, res) {
-    res.send('Welcome to prorecycler! We are group F4.');
+    res.sendFile('index.html', {root : '.'});
 }
 
 var game = function (req, res) { 
