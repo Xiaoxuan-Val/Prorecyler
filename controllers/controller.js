@@ -4,7 +4,7 @@ var Trash = mongoose.model('trashdb');
 var Tip = mongoose.model('tip');
 
 var welcome = function (req, res) {
-    res.sendFile('index.html', {root : '.'});
+    res.render("index");
 }
 
 var game = function (req, res) { 

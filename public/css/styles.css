@@ -1,0 +1,68 @@
+html {
+	margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../images/Background.png)
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+#contents{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#logo{
+    display: block;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    top: 50px;
+    bottom: 50px;
+    height: 288px;
+    left: calc(50% - 1303px/2);
+    position: absolute;
+    width: 1303px;
+} 
+
+#search-bar{
+    background-image: url(../images/SearchBar.png);
+    background-repeat: no-repeat;
+    top: 388px;
+    width: 1137px;
+    height: 116px;
+    left: calc(50% - 1137px/2);
+    position: absolute;
+}
+
+input{
+    top: 32.5px;
+    width: 980px;
+    height: 50px;
+    left: 35px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    color: green;
+    font-size: 30px;
+}
+
+#search-bar-submit{
+    cursor: pointer;
+    background-image: url(../images/Magnifier.png);
+    background-repeat: no-repeat;
+    top: 22.5px;
+    width: 70px;
+    height: 70px;
+    left: calc(50% + 1137px/2 - 70px/2 - 70px);
+    position: absolute;
+}
