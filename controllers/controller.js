@@ -3,6 +3,7 @@ var Bin = mongoose.model('bin');
 var Trash = mongoose.model('trashdb');
 var Tip = mongoose.model('tip');
 
+// show home page
 var welcome = function (req, res) {
     res.render("index");
 }
@@ -72,16 +73,28 @@ var findBinByAddress = function (req, res) {
     });
 };
 
+// show trash page
 var findAllTrashs = (req, res) => {
-    Trash.find((err, trash) => {
+    Trash.find((err, trashs) => {
         if (err) {
             res.sendStatus(500);
         } else {
             // res.send(trash);
             res.render('trash', {
                 title: 'Registered Trash',
-                trash: trash
+                trashs: trashs
             });
+        }
+    });
+};
+
+var findOneTrash = function (req, res) {
+    var trashInx = req.params.id;
+    Trash.findById(trashInx, function (err, trash) {
+        if (!err) {
+            res.send(trash);
+        } else {
+            res.sendStatus(404);
         }
     });
 };
@@ -120,5 +133,6 @@ module.exports.findOneBin = findOneBin;
 module.exports.findBinByAddress = findBinByAddress;
 
 module.exports.findAllTrashs = findAllTrashs;
+module.exports.findOneTrash = findOneTrash;
 module.exports.findTrashType = findTrashType;
 module.exports.findTrashByType = findTrashByType;

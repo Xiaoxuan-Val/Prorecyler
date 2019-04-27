@@ -27,6 +27,9 @@ router.get('/bin/address/:address', controller.findBinByAddress);
 // Find all trash
 router.get('/trash', controller.findAllTrashs);
 
+// Find one trash by id
+router.get('/trash/:id', controller.findOneTrash);
+
 //Find one trash by name
 router.get('/trash/:type', controller.findTrashByType);
 

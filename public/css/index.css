@@ -10,21 +10,6 @@ body{
     background-size: 100%;
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: green;
-}
-
-#contents{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
 #logo{
     display: block;
     background-image: url(../images/logo.png);
@@ -90,13 +75,4 @@ input:active{
     opacity: 0.6;
     background-image: url(../images/Magnifier.png);
     outline: none;
-}
-
-#scrolling{
-    display: block;
-    top: 600px;
-    width: 600px;
-    height: 120px;
-    left: calc(50% - 600px/2);
-    position: absolute;
 }

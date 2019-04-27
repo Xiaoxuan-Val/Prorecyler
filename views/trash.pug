@@ -4,4 +4,8 @@ html
         title prorecycler
         link(rel='stylesheet', href='/css/trash.css')
     body
-        p This should be trash page
+        #header
+        each trash in trashs
+            a(href=`./trash/${trash.id}`)
+                #box
+                    p #{trash.name}
