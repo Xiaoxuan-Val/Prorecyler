@@ -1,38 +1,43 @@
 body{
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: white;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 48px;
 }
 
-a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: green;
+p{
+    color: white;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 28px;
 }
 
-#header{
-    display: block;
-    background-image: url(../images/Title.png);
-    background-repeat: no-repeat;
-    top: 30px;
-    bottom: 30px;
-    left: calc(50% - 995px/2);
-    height: 284px;
-    width: 995px;
+#info{
     position: absolute;
-}
+    background-color: rgb(84, 130, 53);
+    width: 875px;
+    height: 100%;
 
-#box{
-    display: block;
-    background-image: url(../images/Box.png);
-    background-repeat: no-repeat;
-    position: relative;
+}
+#title{
+    top: 30px;
+    width: 875px;
+    height: 394px;
+}
+#type{
+    height: 200px;
+    width: 875px;
     text-align: center;
-    top: 375px;
-    padding: 15px;
-    left: calc(50% - 941px/2);
-    height: 116px;
-    width: 941px;
+}
+#process{
+    height: 200px;
+    width: 875px;
+    text-align: center;
+}
+#pic{
+    position: absolute;
+    top: 250px;
+    left: calc(875px + 272.5px);
 }

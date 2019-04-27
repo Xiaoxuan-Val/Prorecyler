@@ -80,8 +80,7 @@ var findAllTrashs = (req, res) => {
             res.sendStatus(500);
         } else {
             // res.send(trash);
-            res.render('trash', {
-                title: 'Registered Trash',
+            res.render('alltrash', {
                 trashs: trashs
             });
         }
@@ -91,10 +90,13 @@ var findAllTrashs = (req, res) => {
 var findOneTrash = function (req, res) {
     var trashInx = req.params.id;
     Trash.findById(trashInx, function (err, trash) {
-        if (!err) {
-            res.send(trash);
+        if (err) {
+            res.sendStatus(500);
         } else {
-            res.sendStatus(404);
+            // res.send(trash);
+            res.render('trash', {
+                trash: trash
+            });
         }
     });
 };
