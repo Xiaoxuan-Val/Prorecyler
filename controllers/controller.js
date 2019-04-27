@@ -7,7 +7,7 @@ var welcome = function (req, res) {
     res.render("index");
 }
 
-var game = function (req, res) { 
+var game = function (req, res) {
     res.send('Game comming soon...')
 }
 
@@ -24,60 +24,64 @@ var scrolling = function (req, res) {
     })
 }
 
-var createBin = function(req,res){
+var createBin = function (req, res) {
     var bin = new Bin({
-        "type":req.body.type,
-        "address":req.body.address,
-        "distance":req.body.distance,
-        "photo":req.body.photo
+        "type": req.body.type,
+        "address": req.body.address,
+        "distance": req.body.distance,
+        "photo": req.body.photo
     });
-    bin.save(function(err,newBin){
-        if(!err){
+    bin.save(function (err, newBin) {
+        if (!err) {
             res.send(newBin);
-        }else{
+        } else {
             res.sendStatus(400);
         }
     });
 };
 
-var findAllBins = function(req,res){
-    Bin.find(function(err,bins){
-        if(!err){
-            res.send(bins);
-        }else{
-            res.sendStatus(404);
-        }
-    });
-};
-
-var findOneBin = function(req,res){
-    var binInx = req.params.id;
-    Bin.findById(binInx,function(err,bin){
-        if(!err){
-            res.send(bin);
-        }else{
-            res.sendStatus(404);
-        }
-    });
-};
-
-var findBinByAddress = function(req, res){
-    var binAddress = req.params.address;
-    Bin.find({name:binAddress},function(err,bin){
-        if(!err){
-            res.send(bin);
-        }else{
-            res.sendStatus(404);
-        }
-    });
-};
-
-var findAllTrashs = function (req, res) {
-    Trash.find(function (err, trash) {
+var findAllBins = function (req, res) {
+    Bin.find(function (err, bins) {
         if (!err) {
-            res.send(trash);
+            res.send(bins);
         } else {
             res.sendStatus(404);
+        }
+    });
+};
+
+var findOneBin = function (req, res) {
+    var binInx = req.params.id;
+    Bin.findById(binInx, function (err, bin) {
+        if (!err) {
+            res.send(bin);
+        } else {
+            res.sendStatus(404);
+        }
+    });
+};
+
+var findBinByAddress = function (req, res) {
+    var binAddress = req.params.address;
+    Bin.find({ name: binAddress }, function (err, bin) {
+        if (!err) {
+            res.send(bin);
+        } else {
+            res.sendStatus(404);
+        }
+    });
+};
+
+var findAllTrashs = (req, res) => {
+    Trash.find((err, trash) => {
+        if (err) {
+            res.sendStatus(500);
+        } else {
+            // res.send(trash);
+            res.render('trash', {
+                title: 'Registered Trash',
+                trash: trash
+            });
         }
     });
 };
