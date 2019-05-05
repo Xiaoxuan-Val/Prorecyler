@@ -6,6 +6,9 @@ var controller = require('../controllers/controller.js');
 // home page
 router.get('/', controller.welcome);
 
+// map page
+router.get('/map', controller.showmap);
+
 // tips page
 router.get('/tips', controller.scrolling)
 

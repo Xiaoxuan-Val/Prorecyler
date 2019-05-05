@@ -8,6 +8,10 @@ var welcome = function (req, res) {
     res.render("index");
 }
 
+var showmap = function (req, res) {
+    res.render("map");
+}
+
 var game = function (req, res) {
     res.send('Game comming soon...')
 }
@@ -124,6 +128,7 @@ var findTrashType = function (req, res) {
 };
 
 module.exports.welcome = welcome;
+module.exports.showmap = showmap;
 
 module.exports.game = game;
 
