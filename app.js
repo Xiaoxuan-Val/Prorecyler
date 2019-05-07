@@ -17,7 +17,7 @@ require('./models/db.js');
 
 // Routes setup
 var routes = require('./routes/routes.js');
-app.use('/', routes)
+app.use('/', routes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function(){

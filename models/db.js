@@ -15,4 +15,5 @@ mongoose.connect(config.dbURI, config.options).then(
 // Set up models
 require('./bin.js');
 require('./trash.js');
-require('./tip.js')
+require('./tip.js');
+require('./users.js')
