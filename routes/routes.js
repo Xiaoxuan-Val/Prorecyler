@@ -39,4 +39,9 @@ router.get('/trash/:type', controller.findTrashByType);
 //Find one trash by name
 router.get('/trash/:name', controller.findTrashType);
 
+//display user add form
+router.get('/:add/:useradd', controller.getAddForm);
+// Create a new user
+router.post('/users', controller.createUser);
+
 module.exports = router;

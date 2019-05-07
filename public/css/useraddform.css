@@ -1,0 +1,45 @@
+html {
+	margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../images/Background.png);
+    position: relative;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: black;
+}
+
+#header{
+    display: block;
+    background-image: url(../images/Register.png);
+    background-repeat: no-repeat;
+    top: 30px;
+    bottom: 30px;
+    left: calc(50% - 995px/2);
+    height: 284px;
+    width: 995px;
+    position: absolute;
+}
+
+#box{
+    display: block;
+    background-image: url(../images/Box.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    top: 350px;
+    padding: 15px;
+    left: calc(50% - 941px/2);
+    line-height: 116px;
+    height: 116px;
+    width: 941px;
+}

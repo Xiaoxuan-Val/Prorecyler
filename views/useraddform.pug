@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title Register
+        link(rel='stylesheet', href='/css/useraddform.css')
+    body
+        #header
+        div.main
+            form(method='POST' action='/users')
+                div
+                    label(for='name') Name:
+                    input(type='text', placeholder='user_name' name='name')
+
+                div
+                    label(for='email') Email:
+                    input(type='email', placeholder='user_email@email.com' name='email')
+                div
+                    label(for='password') Password:
+                    input(type='text', placeholder='please enter 8 digit number' name='password')
+
+                button(type='submit') Add

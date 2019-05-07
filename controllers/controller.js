@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Bin = mongoose.model('bin');
 var Trash = mongoose.model('trashdb');
 var Tip = mongoose.model('tip');
+const User = mongoose.model('users');
 
 // show home page
 var welcome = function (req, res) {
@@ -127,6 +128,33 @@ var findTrashType = function (req, res) {
     });
 };
 
+// Add a new user to database
+const createUser = function (req, res) {
+  const user = new User({
+    "name": req.body.name,
+    "email": req.body.email,
+    "password": req.body.password,
+
+  });
+  user.save(function (err, newUser) {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.render('index', {
+        title: 'Home'
+      });
+
+    }
+  });
+};
+
+// Add a new user
+const getAddForm = function (req, res) {
+  res.render('useraddform', {
+    title: 'Add User'
+  });
+};
+
 module.exports.welcome = welcome;
 module.exports.showmap = showmap;
 
@@ -143,3 +171,6 @@ module.exports.findAllTrashs = findAllTrashs;
 module.exports.findOneTrash = findOneTrash;
 module.exports.findTrashType = findTrashType;
 module.exports.findTrashByType = findTrashByType;
+
+module.exports.createUser = createUser;
+module.exports.getAddForm = getAddForm;
