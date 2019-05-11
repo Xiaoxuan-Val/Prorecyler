@@ -7,16 +7,19 @@ const passport = require('passport');
 router.get('/', controller.welcome);
 
 // map page and show all bins
-router.get('/maps', controller.findAllBins);
+router.get('/maps', controller.showMaps);
 
 // tips page
-router.get('/tips', controller.showtips)
+router.get('/tips', controller.showTips)
 
 // game page
 router.get('/game', controller.game)
 
 // Create new bin
-router.post('/bin',controller.createBin);
+router.post('/bins', controller.createBin);
+
+// Find all bins
+router.get('/bins', controller.findAllBins);
 
 // Find one bin by id
 router.get('/maps/bins/:id',controller.findOneBin);

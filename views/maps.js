@@ -5,6 +5,7 @@
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
+
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -35,17 +36,36 @@ function initMap() {
     }
 
     // show markers
-    // map.data.addGeoJson();
+    map.data.loadGeoJson('https://api.jsonbin.io/b/5cd7408e4c004c0eb496cb48');
 
-    // for (var i = 0; i < ; i++) {
-    //     var marker = new google.maps.Marker({
-    //         position: {
-    //             lat: binlat,
-    //             lng: binlng
-    //         }, map: map
-    //     });
-    //     attachInfo(marker, bininfo);
-    // }
+    // map.data.loadGeoJson(
+    //     'https://storage.googleapis.com/mapsdevsite/json/google.json');
+
+    // var url = '/bins';
+
+    // var request = new XMLHttpRequest();
+
+    // request.open('GET', url);
+
+    // request.responseType = 'text';
+
+
+    // Bin.find((err, bins) => {
+    //     if (err) {
+    //         res.sendStatus(404);
+    //     } else {
+    //         bins.forEach((bin) => {
+    //             var marker = new google.maps.Marker({
+    //                 position: {
+    //                     lat: bin.coordinates.latitude,
+    //                     lng: bin.coordinates.longitude
+    //                 },
+    //                 map: map
+    //             });
+    //             attachInfo(marker, bin.type);
+    //         });
+    //     }
+    // });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -56,7 +76,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-function attachInfo(marker, info) { 
+function attachInfo(marker, info) {
     var infowindow = new google.maps.InfoWindow({
         content: info
     });

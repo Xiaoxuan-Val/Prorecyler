@@ -1,9 +1,12 @@
 var mongoose = require('mongoose');
-var dataSchema = mongoose.Schema(
+var binSchema = mongoose.Schema(
     {
-        "type":String,
-        "coordinates": { latitude: Number, longitude: Number},
-        "photo":String
+        "type": String,
+        "photo": String,
+        "location": { 
+            type: [Number],
+            required: true
+        },
     }
 );
-mongoose.model('bin', dataSchema);
+mongoose.model('bin', binSchema);

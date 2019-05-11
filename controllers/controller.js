@@ -13,16 +13,20 @@ var game = function (req, res) {
     res.send('Game comming soon...')
 }
 
-var showtips = (req, res) => {
+var showMaps = (req, res) => { 
+    res.render('maps');
+}
+
+var showTips = (req, res) => {
     Tip.countDocuments((err, count) => {
         var random = Math.floor(Math.random() * count)
-        Tip.findOne().skip(random).exec((err, result) => {
+        Tip.findOne().skip(random).exec((err, tip) => {
             if (err) {
                 res.sendStatus(404);
             } else {
                 // res.send(result);
                 res.render('tips', {
-                    tip: result
+                    tip: tip
                 });
             }
         });
@@ -30,11 +34,7 @@ var showtips = (req, res) => {
 }
 
 var createBin = function (req, res) {
-    var bin = new Bin({
-        'type': req.body.type,
-        'coordinates': { latitude: req.body.latitude, longitude: req.body.longitude },
-        'photo': req.body.photo
-    });
+    var bin = new Bin(req.body);
     bin.save(function (err, newBin) {
         if (!err) {
             res.send(newBin);
@@ -49,10 +49,7 @@ var findAllBins = (req, res) => {
         if (err) {
             res.sendStatus(404);
         } else {
-            // res.send(bins);
-            res.render('maps', {
-                bins: bins
-            });
+            res.json(bins);
         }
     });
 };
@@ -175,25 +172,32 @@ var Callback = function (req, res){
 var Profile = function (req, res){
     res.send(req.user.userName);
 }
-module.exports.welcome = welcome;
 
-module.exports.game = game;
+// module.exports.welcome = welcome;
 
-module.exports.showtips = showtips;
+// module.exports.game = game;
 
-module.exports.createBin = createBin;
-module.exports.findAllBins = findAllBins;
-module.exports.findOneBin = findOneBin;
-module.exports.findBinByType = findBinByType;
+// module.exports.showtips = showtips;
 
-module.exports.findAllTrashs = findAllTrashs;
-module.exports.findOneTrash = findOneTrash;
-module.exports.findTrashType = findTrashType;
-module.exports.findTrashByType = findTrashByType;
+// module.exports.createBin = createBin;
+// module.exports.findAllBins = findAllBins;
+// module.exports.findOneBin = findOneBin;
+// module.exports.findBinByType = findBinByType;
 
-//module.exports.createUser = createUser;
-//module.exports.getAddForm = getAddForm;
-module.exports.Login = Login;
-module.exports.Logout = Logout;
-module.exports.Callback = Callback;
-module.exports.Profile = Profile;
+// module.exports.findAllTrashs = findAllTrashs;
+// module.exports.findOneTrash = findOneTrash;
+// module.exports.findTrashType = findTrashType;
+// module.exports.findTrashByType = findTrashByType;
+
+// //module.exports.createUser = createUser;
+// //module.exports.getAddForm = getAddForm;
+// module.exports.Login = Login;
+// module.exports.Logout = Logout;
+// module.exports.Callback = Callback;
+// module.exports.Profile = Profile;
+
+module.exports = {
+    welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
+    findAllTrashs, findOneTrash, findTrashType, findTrashByType, Login, Logout,
+    Callback, Profile, 
+};
