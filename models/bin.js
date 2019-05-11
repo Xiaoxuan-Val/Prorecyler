@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var dataSchema = mongoose.Schema(
     {
         "type":String,
-        "address":String,
-        "distance":String,
+        "coordinates": { latitude: Number, longitude: Number},
         "photo":String
     }
 );

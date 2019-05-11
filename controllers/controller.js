@@ -9,10 +9,6 @@ var welcome = function (req, res) {
     res.render("index");
 }
 
-var showmap = function (req, res) {
-    res.render("map");
-}
-
 var game = function (req, res) {
     res.send('Game comming soon...')
 }
@@ -46,12 +42,15 @@ var createBin = function (req, res) {
     });
 };
 
-var findAllBins = function (req, res) {
-    Bin.find(function (err, bins) {
-        if (!err) {
-            res.send(bins);
-        } else {
+var findAllBins = (req, res) => {
+    Bin.find((err, bins) => {
+        if (err) {
             res.sendStatus(404);
+        } else {
+            // res.send(bins);
+            res.render('map', {
+                bins: bins
+            });
         }
     });
 };
@@ -67,9 +66,9 @@ var findOneBin = function (req, res) {
     });
 };
 
-var findBinByAddress = function (req, res) {
-    var binAddress = req.params.address;
-    Bin.find({ name: binAddress }, function (err, bin) {
+var findBinByType = function (req, res) {
+    var binType = req.params.type;
+    Bin.find({ type: binType }, function (err, bin) {
         if (!err) {
             res.send(bin);
         } else {
@@ -172,7 +171,6 @@ var Callback = function (req, res){
 }
 
 module.exports.welcome = welcome;
-module.exports.showmap = showmap;
 
 module.exports.game = game;
 
@@ -181,7 +179,7 @@ module.exports.scrolling = scrolling;
 module.exports.createBin = createBin;
 module.exports.findAllBins = findAllBins;
 module.exports.findOneBin = findOneBin;
-module.exports.findBinByAddress = findBinByAddress;
+module.exports.findBinByType = findBinByType;
 
 module.exports.findAllTrashs = findAllTrashs;
 module.exports.findOneTrash = findOneTrash;
