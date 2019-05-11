@@ -8,7 +8,7 @@ const passportSetup = require('./config/passport-setup');
 const passport = require('passport');
 
 //set up cookie
-//const cookieSession = require('cookie-session');
+const cookieSession = require('cookie-session');
 
 // set the view engine
 app.set('view engine', 'pug');
@@ -18,10 +18,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-/*app.use(cookieSession({
+app.use(cookieSession({
     maxAge: 24*60*60*1000,
-    keys:'prorecycler'
-}));*/
+    keys:['prorecycler']
+}));
 
 
 //initialize passport
