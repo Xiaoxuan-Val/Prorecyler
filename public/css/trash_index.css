@@ -13,33 +13,33 @@ body{
 a{
     text-decoration: none;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 26px;
     color: black;
 }
 
 #header{
     display: block;
-    background-image: url(../images/Title.png);
+    background-image: url(../images/AllTrashTitle.png);
     background-repeat: no-repeat;
     top: 30px;
     bottom: 30px;
-    left: calc(50% - 995px/2);
-    height: 284px;
-    width: 995px;
+    left: calc(50% - 603px/2);
+    height: 177px;
+    width: 603px;
     position: absolute;
 }
 
 #box{
     display: block;
-    background-image: url(../images/Box.png);
+    background-image: url(../images/AllTrashBox.png);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     text-align: center;
-    top: 350px;
+    top: 200px;
     padding: 15px;
-    left: calc(50% - 941px/2);
-    line-height: 116px;
-    height: 116px;
-    width: 941px;
+    left: calc(50% - 554px/2);
+    line-height: 69px;
+    height: 69px;
+    width: 554px;
 }

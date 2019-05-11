@@ -2,41 +2,50 @@ body{
     margin: 0;
     padding: 0;
 }
+
 h1{
     color: white;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 52px;
+}
+
+h2{
+    color: white;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 39px;
 }
 
 p{
     color: white;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 #info{
     position: absolute;
     background-color: rgb(84, 130, 53);
-    width: 875px;
+    width: 518px;
+    height: 100%;
 
 }
 #title{
-    top: 30px;
-    width: 875px;
-    height: 394px;
+    top: 50px;
+    height: 200px;
+    width: 518px;
+    text-align: center;
 }
 #type{
     height: 200px;
-    width: 875px;
+    width: 518px;
     text-align: center;
 }
 #process{
     height: 200px;
-    width: 875px;
+    width: 518px;
     text-align: center;
 }
 #pic{
     position: absolute;
-    top: 250px;
-    left: calc(875px + 272.5px);
+    top: 200px;
+    left: calc((100% - 518px) / 2 - 500px / 2 + 518px);
 }

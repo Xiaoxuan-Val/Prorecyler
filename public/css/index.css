@@ -12,7 +12,7 @@ body{
 
 #logo{
     display: block;
-    background-image: url(../images/logo.png);
+    background-image: url(../images/Logo.png);
     background-repeat: no-repeat;
     top: 180px;
     bottom: 50px;
@@ -25,7 +25,7 @@ body{
 #search-bar{
     background-image: url(../images/SearchBar.png);
     background-repeat: no-repeat;
-    top: 360px;
+    top: 380px;
     width: 668px;
     height: 69px;
     left: calc(50% - 668px/2);
@@ -33,7 +33,7 @@ body{
 }
 
 input{
-    top: 14px;
+    top: 10px;
     width: 540px;
     height: 50px;
     left: 35px;
@@ -64,7 +64,7 @@ input:active{
 }
 
 #search-bar-submit:hover{
-    background-image: url(../images/Magnifier_hover.png);
+    background-image: url(../images/MagnifierHover.png);
 }
 #search-bar-submit:focus{
     opacity: 1;
@@ -77,23 +77,28 @@ input:active{
     outline: none;
 }
 
-/* #search{
-
+#maps-button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/ShowNearbyBins.png);
+    background-repeat: no-repeat;
+    top: 480px;
+    width: 224px;
+    height: 52px;
+    left: calc(50% - 224px - 20px);
+    position: absolute;
 }
 
 #tips-button{
-
-} */
-
-#feeling-trashy{
     cursor: pointer;
     background: transparent;
     border: none;
     background-image: url(../images/FeelingTrashy.png);
     background-repeat: no-repeat;
-    top: 100px;
-    width: 42px;
-    height: 42px;
-    left: calc(50% + 668px/2 - 42px/2 - 42px);
+    top: 480px;
+    width: 224px;
+    height: 52px;
+    left: calc(50% + 20px);
     position: absolute;
 }
