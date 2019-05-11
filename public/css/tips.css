@@ -1,6 +1,7 @@
 body {
 	margin: 0;
     padding: 0;
+    background-color: rgb(84, 130, 53);
 }
 
 p{
@@ -8,14 +9,7 @@ p{
     font-size: 39px;
 }
 
-#bgbtm{
-    position: absolute;
-    background-color: rgb(84, 130, 53);
-    width: 100%;
-    height: 100%;
-}
-
-#bgtop{
+#tip-content{
     position: absolute;
     background-color: rgb(255, 255, 255);
     top: 15%;
