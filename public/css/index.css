@@ -16,10 +16,10 @@ body{
     background-repeat: no-repeat;
     top: 180px;
     bottom: 50px;
+    width: 785px;
     height: 179px;
     left: calc(50% - 785px/2);
     position: absolute;
-    width: 50%;
 } 
 
 #search-bar{
@@ -77,7 +77,7 @@ input:active{
     outline: none;
 }
 
-#maps-button{
+#maps-button {
     cursor: pointer;
     background: transparent;
     border: none;
@@ -100,5 +100,18 @@ input:active{
     width: 224px;
     height: 52px;
     left: calc(50% + 20px);
+    position: absolute;
+}
+
+#login-button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/Login.png);
+    background-repeat: no-repeat;
+    top: 22.5px;
+    width: 116px;
+    height: 52px;
+    left: calc(80%);
     position: absolute;
 }
