@@ -22,7 +22,7 @@ function initMap() {
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('You are here.');
             infoWindow.open(map);
             map.setCenter(pos);
         }, function () {
@@ -32,6 +32,17 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
+    // show markers
+    for (var i = 0; i < binlength; i++) {
+        var marker = new google.maps.Marker({
+            position: {
+                lat: binlat,
+                lng: binlng
+            }, map: map
+        });
+        attachInfo(marker, bininfo);
+    }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -40,4 +51,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
+}
+
+function attachInfo(marker, info) { 
+    var infowindow = new google.maps.InfoWindow({
+        content: info
+    });
+
+    marker.addListener('click', () => {
+        infowindow.open(marker.get('map'), marker);
+    });
 }

@@ -13,14 +13,17 @@ var game = function (req, res) {
     res.send('Game comming soon...')
 }
 
-var scrolling = function (req, res) {
-    Tip.countDocuments(function (err, count) {
+var showtips = (req, res) => {
+    Tip.countDocuments((err, count) => {
         var random = Math.floor(Math.random() * count)
-        Tip.findOne().skip(random).exec(function (err, result) {
-            if (!err) {
-                res.send(result);
-            } else {
+        Tip.findOne().skip(random).exec((err, result) => {
+            if (err) {
                 res.sendStatus(404);
+            } else {
+                // res.send(result);
+                res.render('tips', {
+                    tip: result
+                });
             }
         });
     })
@@ -28,10 +31,9 @@ var scrolling = function (req, res) {
 
 var createBin = function (req, res) {
     var bin = new Bin({
-        "type": req.body.type,
-        "address": req.body.address,
-        "distance": req.body.distance,
-        "photo": req.body.photo
+        'type': req.body.type,
+        'coordinates': { latitude: req.body.latitude, longitude: req.body.longitude },
+        'photo': req.body.photo
     });
     bin.save(function (err, newBin) {
         if (!err) {
@@ -48,7 +50,7 @@ var findAllBins = (req, res) => {
             res.sendStatus(404);
         } else {
             // res.send(bins);
-            res.render('map', {
+            res.render('maps', {
                 bins: bins
             });
         }
@@ -174,7 +176,7 @@ module.exports.welcome = welcome;
 
 module.exports.game = game;
 
-module.exports.scrolling = scrolling;
+module.exports.showtips = showtips;
 
 module.exports.createBin = createBin;
 module.exports.findAllBins = findAllBins;
