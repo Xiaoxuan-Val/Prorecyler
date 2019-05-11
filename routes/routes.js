@@ -10,7 +10,7 @@ router.get('/', controller.welcome);
 router.get('/maps', controller.findAllBins);
 
 // tips page
-router.get('/tips', controller.scrolling)
+router.get('/tips', controller.showtips)
 
 // game page
 router.get('/game', controller.game)
