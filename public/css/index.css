@@ -14,34 +14,34 @@ body{
     display: block;
     background-image: url(../images/logo.png);
     background-repeat: no-repeat;
-    top: 50px;
+    top: 180px;
     bottom: 50px;
-    height: 288px;
-    left: calc(50% - 1303px/2);
+    height: 179px;
+    left: calc(50% - 785px/2);
     position: absolute;
-    width: 1303px;
+    width: 50%;
 } 
 
 #search-bar{
     background-image: url(../images/SearchBar.png);
     background-repeat: no-repeat;
-    top: 388px;
-    width: 1137px;
-    height: 116px;
-    left: calc(50% - 1137px/2);
+    top: 360px;
+    width: 668px;
+    height: 69px;
+    left: calc(50% - 668px/2);
     position: absolute;
 }
 
 input{
-    top: 32.5px;
-    width: 980px;
+    top: 14px;
+    width: 540px;
     height: 50px;
     left: 35px;
     border: none;
     background: transparent;
     position: absolute;
-    color: green;
-    font-size: 30px;
+    color: rgb(56,87,35);
+    font-size: 26px;
 }
 input:focus{
     outline: none;
@@ -56,10 +56,10 @@ input:active{
     border: none;
     background-image: url(../images/Magnifier.png);
     background-repeat: no-repeat;
-    top: 22.5px;
-    width: 70px;
-    height: 70px;
-    left: calc(50% + 1137px/2 - 70px/2 - 70px);
+    top: 14px;
+    width: 42px;
+    height: 42px;
+    left: calc(50% + 668px/2 - 42px/2 - 42px);
     position: absolute;
 }
 
@@ -84,3 +84,16 @@ input:active{
 #tips-button{
 
 } */
+
+#feeling-trashy{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/FeelingTrashy.png);
+    background-repeat: no-repeat;
+    top: 100px;
+    width: 42px;
+    height: 42px;
+    left: calc(50% + 668px/2 - 42px/2 - 42px);
+    position: absolute;
+}
