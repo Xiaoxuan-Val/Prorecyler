@@ -76,7 +76,18 @@ input:active{
     background-image: url(../images/Magnifier.png);
     outline: none;
 }
-
+#login-button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/Login.png);
+    background-repeat: no-repeat;
+    top: 22.5px;
+    width: 116px;
+    height: 52px;
+    left: calc(50% + 1137px/2 - 70px/2 - 70px);
+    position: absolute;
+}
 /* #search{
 
 }
