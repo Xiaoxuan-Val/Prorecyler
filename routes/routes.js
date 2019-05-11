@@ -51,5 +51,7 @@ router.get('/auth/google', passport.authenticate('google',{
 }));
 //callback route for google to redirect to
 router.get('/auth/google/redirect', passport.authenticate('google'), controller.Callback);
+//redirect page
+router.get('/auth/profile', controller.Profile);
 
 module.exports = router;
