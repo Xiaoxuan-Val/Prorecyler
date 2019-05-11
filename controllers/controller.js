@@ -169,9 +169,12 @@ var Logout = function (req, res){
 }
 
 var Callback = function (req, res){
-    res.send(req.user);
+    //res.send(req.user);
+    res.redirect('/auth/profile/');
 }
-
+var Profile = function (req, res){
+    res.send(req.user.userName);
+}
 module.exports.welcome = welcome;
 
 module.exports.game = game;
@@ -193,3 +196,4 @@ module.exports.findTrashByType = findTrashByType;
 module.exports.Login = Login;
 module.exports.Logout = Logout;
 module.exports.Callback = Callback;
+module.exports.Profile = Profile;
