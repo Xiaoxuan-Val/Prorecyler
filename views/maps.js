@@ -8,6 +8,7 @@
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
+        // location of University of Melbourne
         center: { lat: -37.7966434, lng: 144.9610147 },
         zoom: 15
     });
@@ -34,15 +35,17 @@ function initMap() {
     }
 
     // show markers
-    for (var i = 0; i < binlength; i++) {
-        var marker = new google.maps.Marker({
-            position: {
-                lat: binlat,
-                lng: binlng
-            }, map: map
-        });
-        attachInfo(marker, bininfo);
-    }
+    // map.data.addGeoJson();
+
+    // for (var i = 0; i < ; i++) {
+    //     var marker = new google.maps.Marker({
+    //         position: {
+    //             lat: binlat,
+    //             lng: binlng
+    //         }, map: map
+    //     });
+    //     attachInfo(marker, bininfo);
+    // }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
