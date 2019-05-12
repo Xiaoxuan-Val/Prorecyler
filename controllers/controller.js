@@ -173,9 +173,18 @@ var Callback = function (req, res){
     res.redirect('/auth/profile/');
 }
 var Profile = function (req, res){
-    res.send(req.user.userName);
+    res.render('profile',{user: req.user});
 }
 
+const authCheck = (req,res, next) => {
+    if(!req.user){
+        // if user is not logged in
+        res.redirect('/auth/google');
+    }else{
+        //if logged in
+        next();
+    }
+};
 // module.exports.welcome = welcome;
 
 // module.exports.game = game;
@@ -202,5 +211,5 @@ var Profile = function (req, res){
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
     findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
-    Callback, Profile, 
+    Callback, Profile, authCheck,
 };
