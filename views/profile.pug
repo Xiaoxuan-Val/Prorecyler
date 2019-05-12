@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title prorecycler
+        link(rel='stylesheet', href='/css/index.css')
+    body
+        div
+            p Welcome, #{user.userName}
+            #logo
+            #search-bar
+                input#text(placeholder='Search coming soon...')
+                a(href='/trash')
+                    button#search-bar-submit
+            a(href='/maps')
+                button#maps-button
+            a(href='/tips')
+                button#tips-button
+

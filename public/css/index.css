@@ -10,6 +10,14 @@ body{
     background-size: 100%;
 }
 
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    color: white;
+    text-align:right;
+    font-size: 25px;
+    background-color: rgb(56,87,35);
+}
+
 #logo{
     display: block;
     background-image: url(../images/Logo.png);
@@ -112,6 +120,6 @@ input:active{
     top: 22.5px;
     width: 116px;
     height: 52px;
-    left: calc(80%);
+    left: calc(85%);
     position: absolute;
 }
