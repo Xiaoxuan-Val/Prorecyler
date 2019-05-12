@@ -1,6 +1,11 @@
 # INFO30005-F4 Prorecycler Deliverable 4
 We are group F4, and our project is "prorecycler".
 
+## Features
+Core Functions:
+1.
+2.
+
 ## Set up
 Please `cd` into the repo first.
 Then install dependencies.
