@@ -185,28 +185,6 @@ const authCheck = (req,res, next) => {
         next();
     }
 };
-// module.exports.welcome = welcome;
-
-// module.exports.game = game;
-
-// module.exports.showtips = showtips;
-
-// module.exports.createBin = createBin;
-// module.exports.findAllBins = findAllBins;
-// module.exports.findOneBin = findOneBin;
-// module.exports.findBinByType = findBinByType;
-
-// module.exports.findAllTrashs = findAllTrashs;
-// module.exports.findOneTrash = findOneTrash;
-// module.exports.findTrashType = findTrashType;
-// module.exports.findTrashByType = findTrashByType;
-
-// //module.exports.createUser = createUser;
-// //module.exports.getAddForm = getAddForm;
-// module.exports.Login = Login;
-// module.exports.Logout = Logout;
-// module.exports.Callback = Callback;
-// module.exports.Profile = Profile;
 
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
