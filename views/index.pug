@@ -6,10 +6,11 @@ html
     body
         div
             #logo
-            #search-bar
-                input#text(placeholder='Search coming soon...')
-                a(href='/trash')
-                    button#search-bar-submit
+            from(method='POST' action='/trash/find')
+                #search-bar
+                    input(type='text', placeholder='Search trash' name='search')
+                    button#search-bar-submit(type='submit')
+                    
             a(href='/maps')
                 button#maps-button
             a(href='/tips')

@@ -90,9 +90,9 @@ var findAllTrashs = (req, res) => {
     });
 };
 
-var findOneTrash = function (req, res) {
+var findOneTrash = (req, res) => {
     var trashInx = req.params.id;
-    Trash.findById(trashInx, function (err, trash) {
+    Trash.findById(trashInx, (err, trash) => {
         if (err) {
             res.sendStatus(500);
         } else {
@@ -115,13 +115,16 @@ var findTrashByType = function (req, res) {
     });
 };
 
-var findTrashType = function (req, res) {
-    var trashName = req.params.name;
-    Trash.find({ name: trashName }, function (err, trash) {
-        if (!err) {
-            res.send(trash);
-        } else {
+var findTrashByName = (req, res) => {
+    var trashName = req.body.search;
+    Trash.find({ name: trashName }, (err, trash) => {
+        if (err) {
             res.sendStatus(404);
+        } else {
+            // res.send(trash);
+            res.render('trash', {
+                trash: trash
+            });
         }
     });
 };
@@ -198,6 +201,6 @@ var Profile = function (req, res){
 
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, findTrashType, findTrashByType, Login, Logout,
+    findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
     Callback, Profile, 
 };

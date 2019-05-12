@@ -6,38 +6,11 @@ const passport = require('passport');
 // home page
 router.get('/', controller.welcome);
 
-// map page and show all bins
-router.get('/maps', controller.showMaps);
-
 // tips page
 router.get('/tips', controller.showTips)
 
 // game page
 router.get('/game', controller.game)
-
-// Create new bin
-router.post('/bins', controller.createBin);
-
-// Find all bins
-router.get('/bins', controller.findAllBins);
-
-// Find one bin by id
-router.get('/maps/bins/:id',controller.findOneBin);
-
-//Find bins by types
-router.get('/maps/bins/:type', controller.findBinByType);
-
-// Find all trash
-router.get('/trash', controller.findAllTrashs);
-
-// Find one trash by id
-router.get('/trash/:id', controller.findOneTrash);
-
-//Find one trash by name
-router.get('/trash/:type', controller.findTrashByType);
-
-//Find one trash by name
-router.get('/trash/:name', controller.findTrashType);
 
 //display user add form
 //router.get('/:add/:useradd', controller.getAddForm);

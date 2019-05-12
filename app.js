@@ -35,6 +35,12 @@ require('./models/db.js');
 // Routes setup
 var routes = require('./routes/routes.js');
 app.use('/', routes);
+var binRouter = require('./routes/bins');
+app.use('/bins', binRouter);
+var trashRouter = require('./routes/trashs');
+app.use('/trashs', trashRouter);
+var mapRouter = require('./routes/maps');
+app.use('/maps', mapRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function(){
