@@ -2,7 +2,7 @@
 We are group F4, and our project is "prorecycler".
 
 ## Features
-Core Functions:
+### Core Functions
 
 1. User
 
@@ -25,15 +25,18 @@ the users
 when user click the i'm feeling trashy button, it could comes out random tips form mongodb and 
 flash the page can show different tips with images.
 
-Developing Functions:
+### Developing Functions
 
 1.Map
+
 All nearby bins location are shown in Map
 
 2.Bins
+
 User are able to add a new bin into database
 
 3.Search
+
 User are able to search a trash to find info about how to deal with it
 
 ## Set up
