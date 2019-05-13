@@ -115,6 +115,20 @@ var findTrashByType = function (req, res) {
     });
 };
 
+// var getTrashByName = (req, res) => {
+//     var trashName = req.params.name;
+//     Trash.find({ name: trashName }, (err, trash) => {
+//         if (err) {
+//             res.sendStatus(404);
+//         } else {
+//             // res.send(trash);
+//             res.render('trash', {
+//                 trash: trash
+//             });
+//         }
+//     });
+// };
+
 var findTrashByName = (req, res) => {
     var trashName = req.body.search;
     Trash.find({ name: trashName }, (err, trash) => {
@@ -188,6 +202,6 @@ const authCheck = (req,res, next) => {
 
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
+    findAllTrashs, findOneTrash, getTrashByName, findTrashByName, findTrashByType, Login, Logout,
     Callback, Profile, authCheck,
 };
