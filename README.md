@@ -4,11 +4,29 @@ We are group F4, and our project is "prorecycler".
 ## Features
 Core Functions:
 
-1.user can click the login botton and this would directly link to the google login page and if the user 
+1. User
+
+a.user can click the login botton and this would directly link to the google login page and if the user 
 have google account, user could login the website using google account
 
-2.user could search the trash by name and this would come out the details about the trash
+b.user could search the trash by name and this would come out the details about the trash
 
+
+
+2.All trashes
+
+click the magnifier and this would link to all trash page which show all trashes information
+
+
+3.Map
+
+there is a map when user click find nearest bins button it would show where the user is and the bins around
+the users
+
+4.Tips
+
+when user click the i'm feeling trashy button, it could comes out random tips form mongodb and 
+flash the page can show different tips with images.
 ## Set up
 Please `cd` into the repo first.
 Then install dependencies.
@@ -30,7 +48,7 @@ INFO30005-F4
 ├─┬ public              Stores the static files, e.g. images and styles
 │ └── CSS               
 │      └── index.css    Stores the index html style definitions
-│      └── login.css    Stores the login html style definitions
+│      └── log``in.css    Stores the login html style definitions
 │      └── map.css      Stores the map html style definitions
 │      └── tips.css     Stores the tips html style definitions
 │      └── trash.css    Stores the trash html style definitions
