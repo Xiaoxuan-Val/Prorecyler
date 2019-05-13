@@ -1,4 +1,4 @@
-******~~~~____~~~~******# INFO30005-F4 Prorecycler Deliverable 4
+# INFO30005-F4 Prorecycler Deliverable 4
 We are group F4, and our project is "prorecycler".
 
 ## Features
@@ -11,12 +11,9 @@ have google account, user could login the website using google account
 
 b.user could search the trash by name and this would come out the details about the trash
 
-
-
 2.All trashes
 
 click the magnifier and this would link to all trash page which show all trashes information
-
 
 3.Map
 
@@ -27,6 +24,18 @@ the users
 
 when user click the i'm feeling trashy button, it could comes out random tips form mongodb and 
 flash the page can show different tips with images.
+
+Developing Functions:
+
+1.Map
+All nearby bins location are shown in Map
+
+2.Bins
+User are able to add a new bin into database
+
+3.Search
+User are able to search a trash to find info about how to deal with it
+
 ## Set up
 Please `cd` into the repo first.
 Then install dependencies.
@@ -78,6 +87,7 @@ INFO30005-F4
 ```
 
 ## Reference
+Course content from week 1 to 7
 
 ## Acknowledgement
 This project completed by Weijie Lin (905673), Xiaohan Liu(908471), Xiaoxuan Li (933206), Xun Zhang (854776), 
