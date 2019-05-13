@@ -10,31 +10,31 @@ We are group F4, and our project is "prorecycler".
 
     b.user could search the trash by name and this would come out the details about the trash
 
-2.All trashes
+2. All trashes
 
 click the magnifier and this would link to all trash page which show all trashes information
 
-3.Map
+3. Map
 
 there is a map when user click find nearest bins button it would show where the user is and the bins around
 the users
 
-4.Tips
+4. Tips
 
 when user click the i'm feeling trashy button, it could comes out random tips form mongodb and 
 flash the page can show different tips with images.
 
 ### Developing Functions
 
-1.Map
+1. Map
 
 All nearby bins location are shown in Map
 
-2.Bins
+2. Bins
 
 User are able to add a new bin into database
 
-3.Search
+3. Search
 
 User are able to search a trash to find info about how to deal with it
 
