@@ -13,7 +13,7 @@ router.get('/:id', controller.findOneTrash);
 router.get('/:type', controller.findTrashByType);
 
 // Find one trash by name
-router.get('/name/:name', controller.getTrashByName);
+//router.get('/name/:name', controller.getTrashByName);
 
 // Find one trash by name
 router.post('/find', controller.findTrashByName);

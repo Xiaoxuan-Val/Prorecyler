@@ -202,6 +202,9 @@ const authCheck = (req,res, next) => {
 
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, getTrashByName, findTrashByName, findTrashByType, Login, Logout,
+    findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
     Callback, Profile, authCheck,
 };
+
+
+//getTrashByName
