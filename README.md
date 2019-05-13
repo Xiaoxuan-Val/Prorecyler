@@ -6,10 +6,9 @@ We are group F4, and our project is "prorecycler".
 
 1. User
 
-a.user can click the login botton and this would directly link to the google login page and if the user 
-have google account, user could login the website using google account
+    a.user can click the login botton and this would directly link to the google login page and if the user have google account, user could login the website using google account
 
-b.user could search the trash by name and this would come out the details about the trash
+    b.user could search the trash by name and this would come out the details about the trash
 
 2.All trashes
 
