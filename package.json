@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "directories": {
     "doc": "doc"
   },
@@ -17,9 +20,6 @@
     "mongoose": "^5.5.7",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0"
-  },
-  "scripts": {
-    "start": "node app.js"
   },
   "repository": {
     "type": "git",
