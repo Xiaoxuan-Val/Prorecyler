@@ -130,6 +130,7 @@ var findTrashByType = function (req, res) {
 // };
 
 var findTrashByName = (req, res) => {
+    console.log('Enter this function');
     var trashName = req.body.search;
     Trash.find({ name: trashName }, (err, trash) => {
         if (err) {
