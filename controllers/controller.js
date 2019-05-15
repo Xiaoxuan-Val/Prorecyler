@@ -136,10 +136,10 @@ var findTrashByName = (req, res) => {
         if (err) {
             res.sendStatus(404);
         } else {
-            res.send(trash);
-            // res.render('trash', {
-            //     trash: trash
-            // });
+            // res.send(trash);
+            res.render('trash', {
+                trash: trash
+            });
         }
     });
 };

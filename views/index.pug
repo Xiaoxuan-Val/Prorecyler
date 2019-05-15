@@ -7,7 +7,7 @@ html
         div
             #logo
             #search-bar
-                from(method='POST' action='/trashs/find')
+                form(method='POST' action='/trashs/find')
                     input(type='text', placeholder='Search trash' name='search')
                     button#search-bar-submit(type='submit')
             a(href='/maps')
@@ -16,6 +16,3 @@ html
                 button#tips-button
             a(href='/auth/google')
                 button#login-button
-
-    script
-        include search.js
