@@ -13,7 +13,7 @@ var game = function (req, res) {
     res.send('Game comming soon...')
 }
 
-var showMaps = (req, res) => { 
+var showMaps = (req, res) => {
     res.render('maps');
 }
 
@@ -96,38 +96,13 @@ var findOneTrash = (req, res) => {
         if (err) {
             res.sendStatus(500);
         } else {
-            // res.send(trash);
-            res.render('trash', {
-                trash: trash
-            });
-        }
-    });
-};
-
-var findTrashByType = function (req, res) {
-    var trashType = req.params.type;
-    Trash.find({ type: trashType }, function (err, trash) {
-        if (!err) {
             res.send(trash);
-        } else {
-            res.sendStatus(404);
+            // res.render('trash', {
+            //     trash: trash
+            // });
         }
     });
 };
-
-// var getTrashByName = (req, res) => {
-//     var trashName = req.params.name;
-//     Trash.find({ name: trashName }, (err, trash) => {
-//         if (err) {
-//             res.sendStatus(404);
-//         } else {
-//             // res.send(trash);
-//             res.render('trash', {
-//                 trash: trash
-//             });
-//         }
-//     });
-// };
 
 var findTrashByName = (req, res) => {
     var trashName = req.body.search;
@@ -139,6 +114,17 @@ var findTrashByName = (req, res) => {
             // res.render('trash', {
             //     trash: trash
             // });
+        }
+    });
+};
+
+var findTrashByType = function (req, res) {
+    var trashType = req.params.type;
+    Trash.find({ type: trashType }, function (err, trash) {
+        if (!err) {
+            res.send(trash);
+        } else {
+            res.sendStatus(404);
         }
     });
 };
