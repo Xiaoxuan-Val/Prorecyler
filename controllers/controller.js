@@ -105,15 +105,16 @@ var findOneTrash = (req, res) => {
 };
 
 var findTrashByName = (req, res) => {
+    console.log('Enter this function');
     var trashName = req.body.search;
     Trash.find({ name: trashName }, (err, trash) => {
         if (err) {
             res.sendStatus(404);
         } else {
-            res.send(trash);
-            // res.render('trash', {
-            //     trash: trash
-            // });
+            // res.send(trash);
+            res.render('trash', {
+                trash: trash
+            });
         }
     });
 };
