@@ -96,21 +96,6 @@ var findOneTrash = (req, res) => {
         if (err) {
             res.sendStatus(500);
         } else {
-            res.send(trash);
-            // res.render('trash', {
-            //     trash: trash
-            // });
-        }
-    });
-};
-
-var findTrashByName = (req, res) => {
-    console.log('Enter this function');
-    var trashName = req.body.search;
-    Trash.find({ name: trashName }, (err, trash) => {
-        if (err) {
-            res.sendStatus(404);
-        } else {
             // res.send(trash);
             res.render('trash', {
                 trash: trash
@@ -119,16 +104,44 @@ var findTrashByName = (req, res) => {
     });
 };
 
-var findTrashByType = function (req, res) {
-    var trashType = req.params.type;
-    Trash.find({ type: trashType }, function (err, trash) {
-        if (!err) {
-            res.send(trash);
-        } else {
+var findTrashByName = (keyword, res) => {
+    var trashName = keyword;
+    Trash.find({ name: trashName }, (err, trashs) => {
+        if (err) {
             res.sendStatus(404);
+        } else {
+            // res.send(trash);
+            res.render('searchresult', {
+                trashs: trashs, 
+                resultcount: trashs.length
+            });
         }
     });
 };
+
+var findTrashByType = function (keyword, res) {
+    var trashType = keyword;
+    Trash.find({ type: trashType }, function (err, trashs) {
+        if (err) {
+            res.sendStatus(404);
+        } else {
+            // res.send(trash);
+            res.render('searchresult', {
+                trashs: trashs, 
+                resultcount: trashs.length
+            });
+        }
+    });
+};
+
+var findTrashs = (req, res) => {
+    var keyword = req.body.search;
+    if (keyword == "Recyclable" || keyword == "Non-recyclable") {
+        findTrashByType(keyword, res);
+    } else { 
+        findTrashByName(keyword, res);
+    }
+}
 
 // Add a new user to database
 /*const createUser = function (req, res) {
@@ -189,7 +202,7 @@ const authCheck = (req,res, next) => {
 
 module.exports = {
     welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
+    findAllTrashs, findOneTrash, findTrashs, Login, Logout,
     Callback, Profile, authCheck,
 };
 

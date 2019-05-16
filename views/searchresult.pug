@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title SearchResult
+        link(rel='stylesheet', href='/css/searchresult.css')
+    body
+        #search-bar
+            form(method='POST' action='/trashs/find')
+                input(type='text', placeholder='Search trash' name='search')
+                button#search-bar-submit(type='submit')
+        p #{resultcount} results found. No satisfied result? Try add it.
+        a(helf='/trashs')
+            p Check all recorded trashs
+        a(helf='/trashs/add')
+            p Add a new data
+        each trash in trashs
+            #result-content
+                a(href=`/trashs/${trash.id}`)
+                    h1 #{trash.name}
+                p Type: #{trash.type}
