@@ -6,21 +6,38 @@ body {
 
 p{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 39px;
+    font-size: 26px;
 }
 
-#result-content{
+h1{
+    text-decoration: none;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 39px;
+    color: rgb(84, 130, 53);
+}
+
+#search{
     position: absolute;
     background-color: rgb(255, 255, 255);
     left: 15%;
     width: 70%;
+    height: 100%;
+}
+
+#result{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom:15%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
 }
 
 #logo{
     display: block;
     background-image: url(../images/LogoSmall.png);
     background-repeat: no-repeat;
-    top: 180px;
+    top: 20px;
     bottom: 50px;
     width: 643px;
     height: 146px;
@@ -31,7 +48,7 @@ p{
 #search-bar{
     background-image: url(../images/SearchBar.png);
     background-repeat: no-repeat;
-    top: 380px;
+    top: 200px;
     width: 668px;
     height: 69px;
     left: calc(50% - 668px/2);
@@ -89,28 +106,13 @@ input:active{
     left: 545px;
 }
 
-#box{
-    display: block;
-    background-image: url(../images/AllTrashBox.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    text-align: center;
-    top: 200px;
-    padding: 15px;
-    left: calc(50% - 554px/2);
-    line-height: 69px;
-    height: 69px;
-    width: 554px;
-}
-
 #show-all-trash-button {
     cursor: pointer;
     background: transparent;
     border: none;
     background-image: url(../images/ShowAllTrash.png);
     background-repeat: no-repeat;
-    top: 480px;
+    top: 300px;
     width: 224px;
     height: 52px;
     left: calc(50% - 224px - 20px);
@@ -123,7 +125,7 @@ input:active{
     border: none;
     background-image: url(../images/AddMyOwnData.png);
     background-repeat: no-repeat;
-    top: 480px;
+    top: 300px;
     width: 224px;
     height: 52px;
     left: calc(50% + 20px);
