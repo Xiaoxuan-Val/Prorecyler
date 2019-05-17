@@ -13,7 +13,7 @@ var game = function (req, res) {
     res.send('Game comming soon...')
 }
 
-var showMaps = (req, res) => { 
+var showMaps = (req, res) => {
     res.render('maps');
 }
 
@@ -93,44 +93,44 @@ var findOneTrash = (req, res) => {
     });
 };
 
-var findTrashByType = function (req, res) {
-    var trashType = req.params.type;
-    Trash.find({ type: trashType }, function (err, trash) {
-        if (!err) {
-            res.send(trash);
-        } else {
-            res.sendStatus(404);
-        }
-    });
-};
-
-// var getTrashByName = (req, res) => {
-//     var trashName = req.params.name;
-//     Trash.find({ name: trashName }, (err, trash) => {
-//         if (err) {
-//             res.sendStatus(404);
-//         } else {
-//             // res.send(trash);
-//             res.render('trash', {
-//                 trash: trash
-//             });
-//         }
-//     });
-// };
-
-var findTrashByName = (req, res) => {
-    var trashName = req.body.search;
-    Trash.find({ name: trashName }, (err, trash) => {
+var findTrashByName = (keyword, res) => {
+    var trashName = keyword;
+    Trash.find({ name: trashName }, (err, trashs) => {
         if (err) {
             res.sendStatus(404);
         } else {
-            res.send(trash);
-            // res.render('trash', {
-            //     trash: trash
-            // });
+            // res.send(trash);
+            res.render('searchresult', {
+                trashs: trashs, 
+                resultcount: trashs.length
+            });
         }
     });
 };
+
+var findTrashByType = function (keyword, res) {
+    var trashType = keyword;
+    Trash.find({ type: trashType }, function (err, trashs) {
+        if (err) {
+            res.sendStatus(404);
+        } else {
+            // res.send(trash);
+            res.render('searchresult', {
+                trashs: trashs, 
+                resultcount: trashs.length
+            });
+        }
+    });
+};
+
+var findTrashs = (req, res) => {
+    var keyword = req.body.search;
+    if (keyword == "Recyclable" || keyword == "Non-recyclable") {
+        findTrashByType(keyword, res);
+    } else { 
+        findTrashByName(keyword, res);
+    }
+}
 
 // Add a new user to database
 /*const createTrash = function (req, res) {

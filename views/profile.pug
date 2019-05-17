@@ -9,12 +9,11 @@ html
             a(href='/auth/usercenter')
                 button#upload-button
             #logo
-            from(method='POST' action='/trashs/find')
-                #search-bar
+            #search-bar
+                form(method='POST' action='/trashs/find')
                     input(type='text', placeholder='Search trash' name='search')
                     button#search-bar-submit(type='submit')
             a(href='/maps')
                 button#maps-button
             a(href='/tips')
                 button#tips-button
-
