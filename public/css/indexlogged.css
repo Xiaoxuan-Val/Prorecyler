@@ -1,5 +1,5 @@
 html {
-	margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -8,6 +8,14 @@ body{
     position: relative;
     background-repeat: repeat;
     background-size: 100%;
+}
+
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    color: white;
+    text-align:right;
+    font-size: 25px;
+    background-color: rgb(56,87,35);
 }
 
 #logo{
@@ -20,7 +28,7 @@ body{
     height: 179px;
     left: calc(50% - 785px/2);
     position: absolute;
-} 
+}
 
 #search-bar{
     background-image: url(../images/SearchBar.png);
@@ -111,6 +119,18 @@ input:active{
     background-repeat: no-repeat;
     top: 22.5px;
     width: 116px;
+    height: 52px;
+    left: calc(85%);
+    position: absolute;
+}
+#user-centre{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/UserCentre.png);
+    background-repeat: no-repeat;
+    top: 30px;
+    width: 224px;
     height: 52px;
     left: calc(85%);
     position: absolute;

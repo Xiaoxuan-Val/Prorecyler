@@ -4,13 +4,55 @@ html {
 }
 
 body{
-    background-color: rgb(84, 130, 53);
+    background-image: url(../images/Background.png);
+    position: relative;
+    background-repeat: repeat;
+    background-size: 100%;
 }
 
 p{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     color: white;
-    text-align:right;
+    text-align:left;
     font-size: 25px;
     background-color: rgb(56,87,35);
+}
+
+#add-trash-info {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/AddTrashInfo.png);
+    background-repeat: no-repeat;
+    top: 100px;
+    width: 224px;
+    height: 52px;
+    left: calc(10%);
+    position: absolute;
+}
+
+#add-recycle-site {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/AddRecycleSite.png);
+    background-repeat: no-repeat;
+    top: 200px;
+    width: 224px;
+    height: 52px;
+    left: calc(10%);
+    position: absolute;
+}
+
+#back-to-home {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/BackToHome.png);
+    background-repeat: no-repeat;
+    top: 300px;
+    width: 224px;
+    height: 52px;
+    left: calc(10%);
+    position: absolute;
 }

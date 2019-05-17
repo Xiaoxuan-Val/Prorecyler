@@ -4,18 +4,20 @@ html
         title Add Bin
         link(rel='stylesheet', href='/css/binaddform.css')
     body
-        #header
-        div.main
-            form(method='POST' action='/auth/usercenter/saveBin')
-                div
-                    label(for='type') Type:
-                    input(type='text', placeholder='recycler or mix' name='type')
-                div
-                    label(for='photo') Picture:
-                    input(type='text', placeholder='please enter picture url' name='photo')
-                div
-                    label(for='location') Location:
-                    input(type='text', placeholder='please enter location as [longitude, latitude]' name='location')
-
-
-                button(type='submit') Add
+        #title
+            #addform
+                div.main
+                    form(method='POST' action='/auth/usercenter/saveBin')
+                        div
+                            label(for='type')
+                            a Type:
+                            input(type='text', placeholder='recycler or mix' name='type')
+                        div
+                            label(for='photo')
+                            a Picture:
+                            input(type='text', placeholder='please enter picture url' name='photo')
+                        div
+                            label(for='location')
+                            a Location:
+                            input(type='text', placeholder='please enter location as [longitude, latitude]' name='location')
+                        button#submit

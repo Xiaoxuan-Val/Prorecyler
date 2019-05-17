@@ -1,45 +1,43 @@
-html {
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
+    background-color: rgb(84, 130, 53);
 }
 
 a{
     text-decoration: none;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 26px;
     color: black;
 }
 
-#header{
+#addform{
+    position: absolute;
+    background-color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    top: 120px;
+}
+
+#title{
     display: block;
-    background-image: url(../images/Register.png);
+    background-image: url(../images/AddRecycleSiteTitle.png);
     background-repeat: no-repeat;
-    top: 30px;
+    top: 5%;
     bottom: 30px;
-    left: calc(50% - 995px/2);
-    height: 284px;
-    width: 995px;
+    height: 127px;
+    width: 737px;
     position: absolute;
 }
 
-#box{
-    display: block;
-    background-image: url(../images/Box.png);
+#submit{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/Submit.png);
     background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    text-align: center;
-    top: 350px;
-    padding: 15px;
-    left: calc(50% - 941px/2);
-    line-height: 116px;
-    height: 116px;
-    width: 941px;
+    top: 250px;
+    width: 224px;
+    height: 52px;
+    left: calc(5%);
+    position: absolute;
 }

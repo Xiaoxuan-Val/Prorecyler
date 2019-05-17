@@ -2,12 +2,12 @@ doctype html
 html
     head
         title prorecycler
-        link(rel='stylesheet', href='/css/index.css')
+        link(rel='stylesheet', href='/css/indexlogged.css')
     body
         div
             p Welcome, #{user.userName}.
             a(href='/auth/usercenter')
-                button#upload-button
+                button#user-centre
             #logo
             #search-bar
                 form(method='POST' action='/trashs/find')
