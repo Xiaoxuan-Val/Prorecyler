@@ -7,7 +7,7 @@
 // locate you.
 
 var map, infoWindow;
-function initMap() {
+window.initMap = () => {
     map = new google.maps.Map(document.getElementById('map'), {
         // location of University of Melbourne
         center: { lat: -37.7966434, lng: 144.9610147 },
