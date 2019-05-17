@@ -26,11 +26,9 @@ We are group F4, and our project is "prorecycler".
 
 1. Map
 
-    Press the marker of bins in the map will show the detail info of this bin.
+    a. Press the marker of bins in the map will show the detail info of this bin.
 
-2. Bins
-
-    User are able to add a new bin into database
+    b. The marker color of bin will change according to the type of bin, e.g. recycling bin is yellow, landfill is read
 
 ## Set up
 Please `cd` into the repo first.
