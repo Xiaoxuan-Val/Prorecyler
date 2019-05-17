@@ -4,22 +4,24 @@ html
         title Add Trash
         link(rel='stylesheet', href='/css/trashaddform.css')
     body
-        #header
-        div.main
-            form(method='POST' action='/auth/usercenter/saveTrash')
-                div
-                    label(for='name') Name:
-                    input(type='text', placeholder='trash name' name='name')
-
-                div
-                    label(for='type') Type:
-                    input(type='text', placeholder='recyclable or nonrecyclable' name='type')
-                div
-                    label(for='pic') Picture:
-                    input(type='text', placeholder='please enter picture url' name='pic')
-                div
-                    label(for='process') Process:
-                    input(type='text', placeholder='Use one sentence to describe the deposit process.' name='process')
-
-
-                button(type='submit') Add
+        #title
+            #addform
+                div.main
+                    form(method='POST' action='/auth/usercenter/saveTrash')
+                        div
+                            label(for='name')
+                            a Name:
+                            input(type='text', placeholder='trash name' name='name')
+                        div
+                            label(for='type')
+                            a Type:
+                            input(type='text', placeholder='recyclable or nonrecyclable' name='type')
+                        div
+                            label(for='pic')
+                            a Picture:
+                            input(type='text', placeholder='please enter picture url' name='pic')
+                        div
+                            label(for='process')
+                            a Process:
+                            input(type='text', placeholder='Use one sentence to describe the deposit process.' name='process')
+                        button#submit
