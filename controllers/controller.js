@@ -242,7 +242,7 @@ var createBin = function(req, res){
 
 module.exports = {
     welcome, game, showTips, showMaps, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, findTrashByName, findTrashByType, Login, Logout,
+    findAllTrashs, findOneTrash,  Login, Logout, findTrashs,
     Callback, Profile, authCheck, authUser, addTrash, createTrash, addBin, createBin,
 };
 
