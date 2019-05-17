@@ -35,37 +35,37 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    // show markers
-    map.data.loadGeoJson('https://api.jsonbin.io/b/5cd7408e4c004c0eb496cb48');
+    // add markers
+    var url = '/bins';
 
-    // map.data.loadGeoJson(
-    //     'https://storage.googleapis.com/mapsdevsite/json/google.json');
+    var request = new XMLHttpRequest();
 
-    // var url = '/bins';
+    request.onreadystatechange = () => { 
+        if (this.readyState == 4 && this.status == 200) { 
+            var bins = JSON.parse(this.responseText);
 
-    // var request = new XMLHttpRequest();
+            var i;
+            for (i = 0; i < bins.length; i++) {
+                var pos = { lat: bins[i].location[0], lng: bins[i].location[1] };
+                var infocontent = '<p><b>Type: </b>' + bins[i].type + '</p>';
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: infocontent
+                });
+                marker.addListener('click', () => { 
+                    infowindow.open(map, marker);
+                });
+            }
+        }
+    }
+    
+    request.open('GET', url);
 
-    // request.open('GET', url);
+    request.send();
 
-    // request.responseType = 'text';
-
-
-    // Bin.find((err, bins) => {
-    //     if (err) {
-    //         res.sendStatus(404);
-    //     } else {
-    //         bins.forEach((bin) => {
-    //             var marker = new google.maps.Marker({
-    //                 position: {
-    //                     lat: bin.coordinates.latitude,
-    //                     lng: bin.coordinates.longitude
-    //                 },
-    //                 map: map
-    //             });
-    //             attachInfo(marker, bin.type);
-    //         });
-    //     }
-    // });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -74,14 +74,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
-}
-
-function attachInfo(marker, info) {
-    var infowindow = new google.maps.InfoWindow({
-        content: info
-    });
-
-    marker.addListener('click', () => {
-        infowindow.open(marker.get('map'), marker);
-    });
 }

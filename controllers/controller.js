@@ -46,21 +46,21 @@ var findAllBins = (req, res) => {
 var findOneBin = function (req, res) {
     var binInx = req.params.id;
     Bin.findById(binInx, function (err, bin) {
-        if (!err) {
-            res.send(bin);
-        } else {
+        if (err) {
             res.sendStatus(404);
+        } else {
+            res.send(bin);
         }
     });
 };
 
 var findBinByType = function (req, res) {
-    var binType = req.params.type;
-    Bin.find({ type: binType }, function (err, bin) {
-        if (!err) {
-            res.send(bin);
-        } else {
+    var binType = req.params.type.toLowerCase();
+    Bin.find({ type: binType }, function (err, bins) {
+        if (err) {
             res.sendStatus(404);
+        } else {
+            res.send(bins);
         }
     });
 };
