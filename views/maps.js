@@ -40,32 +40,33 @@ function initMap() {
 
     var request = new XMLHttpRequest();
 
-    request.onreadystatechange = () => { 
-        if (this.readyState == 4 && this.status == 200) { 
-            var bins = JSON.parse(this.responseText);
+    request.open('GET', url);
+
+    request.responseType = 'text';
+
+    request.onload = () => { 
+        if (request.readyState == request.DONE && request.status == 200) { 
+            var bins = JSON.parse(request.responseText);
 
             var i;
             for (i = 0; i < bins.length; i++) {
                 var pos = { lat: bins[i].location[0], lng: bins[i].location[1] };
-                var infocontent = '<p><b>Type: </b>' + bins[i].type + '</p>';
+                // var infocontent = '<p><b>Type: </b>' + bins[i].type + '</p>';
                 var marker = new google.maps.Marker({
                     position: pos,
                     map: map
                 });
-                var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-                });
-                marker.addListener('click', () => { 
-                    infowindow.open(map, marker);
-                });
+                // var infowindow = new google.maps.InfoWindow({
+                //     content: infocontent
+                // });
+                // marker.addListener('click', () => { 
+                //     infowindow.open(map, marker);
+                // });
             }
         }
     }
-    
-    request.open('GET', url);
 
     request.send();
-
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {

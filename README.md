@@ -16,7 +16,7 @@ We are group F4, and our project is "prorecycler".
 
 3. Map
 
-    there is a map when user click find nearest bins button it would show where the user is and (developing, coming soon..) the bins around the users
+    there is a map when user click find nearest bins button it would show where the user is and the bins around the users
 
 4. Tips
 
@@ -26,7 +26,7 @@ We are group F4, and our project is "prorecycler".
 
 1. Map
 
-    All nearby bins location are shown in Map
+    Press the marker of bins in the map will show the detail info of this bin.
 
 2. Bins
 
