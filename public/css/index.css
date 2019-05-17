@@ -123,3 +123,15 @@ input:active{
     left: calc(85%);
     position: absolute;
 }
+#upload-button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/Login.png);
+    background-repeat: no-repeat;
+    top: 22.5px;
+    width: 116px;
+    height: 52px;
+    left: calc(85%);
+    position: absolute;
+}

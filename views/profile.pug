@@ -5,7 +5,9 @@ html
         link(rel='stylesheet', href='/css/index.css')
     body
         div
-            p Welcome, #{user.userName}
+            p Welcome, #{user.userName}.
+            a(href='/auth/usercenter')
+                button#upload-button
             #logo
             from(method='POST' action='/trashs/find')
                 #search-bar
