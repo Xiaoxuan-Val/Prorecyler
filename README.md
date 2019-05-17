@@ -2,6 +2,11 @@
 We are group F4, and our project is "prorecycler".
 
 ## Features
+### Bug found
+1. Map
+
+    Map function working well locally but failed on heroku
+
 ### Core Functions
 
 1. User
