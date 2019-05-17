@@ -29,5 +29,17 @@ router.get('/auth/google', passport.authenticate('google',{
 router.get('/auth/google/redirect', passport.authenticate('google'), controller.Callback);
 //redirect page
 router.get('/auth/profile', controller.authCheck, controller.Profile);
+//user center page
+router.get('/auth/usercenter', controller.authUser);
+//user get add trash form
+router.get('/auth/usercenter/addTrash', controller.addTrash);
+//user save trash to data base
+router.post('/auth/usercenter/saveTrash', controller.createTrash);
+//user get add bin form
+router.get('/auth/usercenter/addBin', controller.addBin);
+//user save bin to data base
+router.post('/auth/usercenter/saveBin', controller.createBin);
+
+
 
 module.exports = router;
