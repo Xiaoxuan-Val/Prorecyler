@@ -4,7 +4,6 @@ var trashSchema = mongoose.Schema(
         "name": String,
         "type": String,
         "pic": String,
-        "title": String,
         "process": String
     }
 );

@@ -33,17 +33,6 @@ var showTips = (req, res) => {
     })
 }
 
-var createBin = function (req, res) {
-    var bin = new Bin(req.body);
-    bin.save(function (err, newBin) {
-        if (!err) {
-            res.send(newBin);
-        } else {
-            res.sendStatus(400);
-        }
-    });
-};
-
 var findAllBins = (req, res) => {
     Bin.find((err, bins) => {
         if (err) {
@@ -104,47 +93,33 @@ var findOneTrash = (req, res) => {
     });
 };
 
-var findTrashByName = (keyword, res) => {
-    var trashName = keyword;
-    Trash.find({ name: trashName }, (err, trashs) => {
-        if (err) {
-            res.sendStatus(404);
-        } else {
-            // res.send(trash);
-            res.render('searchresult', {
-                trashs: trashs, 
-                resultcount: trashs.length
-            });
-        }
-    });
-};
-
-var findTrashByType = function (keyword, res) {
-    var trashType = keyword;
-    Trash.find({ type: trashType }, function (err, trashs) {
-        if (err) {
-            res.sendStatus(404);
-        } else {
-            // res.send(trash);
-            res.render('searchresult', {
-                trashs: trashs, 
-                resultcount: trashs.length
-            });
-        }
-    });
-};
-
 var findTrashs = (req, res) => {
-    var keyword = req.body.search;
-    if (keyword == "Recyclable" || keyword == "Non-recyclable") {
-        findTrashByType(keyword, res);
-    } else { 
-        findTrashByName(keyword, res);
-    }
+    var keyword = req.body.search.toLowerCase();
+    Trash.find({ type: keyword }, function (err, trashs) {
+        if (err) {
+            res.sendStatus(404);
+        } else if (trashs.length > 0) {
+            res.render('searchresult', {
+                trashs: trashs,
+                resultcount: trashs.length
+            });
+        } else { 
+            Trash.find({ name: keyword }, (err, trashs) => {
+                if (err) {
+                    res.sendStatus(404);
+                } else {
+                    res.render('searchresult', {
+                        trashs: trashs,
+                        resultcount: trashs.length
+                    });
+                }
+            });
+        }
+    });
 }
 
 // Add a new user to database
-/*const createUser = function (req, res) {
+/*const createTrash = function (req, res) {
   const user = new User({
     "name": req.body.name,
     "email": req.body.email,
@@ -155,7 +130,7 @@ var findTrashs = (req, res) => {
     if (err) {
       res.sendStatus(500);
     } else {
-      res.render('index', {
+      res.render('profile', {
         title: 'Home'
       });
 
@@ -200,10 +175,61 @@ const authCheck = (req,res, next) => {
     }
 };
 
+var authUser = function(req, res){
+    res.render('usercenter',{title: 'User Center'});
+}
+
+var addTrash = function(req, res){
+    res.render('addTrashForm',{title: 'Add Trash'});
+}
+
+var createTrash = function(req, res){
+    const trash = new Trash({
+        "name": req.body.name,
+        "type": req.body.type,
+        "pic": req.body.pic,
+        "process": req.body.process,
+
+    });
+    trash.save(function (err, newTrash) {
+        if (err) {
+            res.sendStatus(500);
+        } else {
+            res.render('ThankYouPage', {
+                title: 'ThankYou'
+            });
+
+        }
+    });
+}
+
+var addBin = function(req, res){
+    res.render('addBinForm',{title: 'Add Bin'});
+}
+
+var createBin = function(req, res){
+    const bin = new Bin({
+        "type": req.body.type,
+        "photo": req.body.photo,
+        "location": req.body.location,
+
+    });
+    bin.save(function (err, newBin) {
+        if (err) {
+            res.sendStatus(500);
+        } else {
+            res.render('ThankYouPage', {
+                title: 'Thank You'
+            });
+
+        }
+    });
+}
+
 module.exports = {
-    welcome, game, showTips, showMaps, createBin, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash, findTrashs, Login, Logout,
-    Callback, Profile, authCheck,
+    welcome, game, showTips, showMaps, findAllBins, findOneBin, findBinByType,
+    findAllTrashs, findOneTrash,  Login, Logout, findTrashs,
+    Callback, Profile, authCheck, authUser, addTrash, createTrash, addBin, createBin,
 };
 
 
