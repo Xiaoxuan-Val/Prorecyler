@@ -10,14 +10,13 @@ We are group F4, and our project is "prorecycler".
 
     b.user could search the trash by name and this would come out the details about the trash
 
-2. All trashes
+2. Search
 
-    click the magnifier and this would link to all trash page which show all trashes information
+    Enter keywords (either trash type or trash name, case-insensitive) into search bar in the home page and presh search button will lead user into a search result page, showing all the results found, and click the trash into another page showing its detail information.
 
 3. Map
 
-    there is a map when user click find nearest bins button it would show where the user is and the bins around
-the users
+    there is a map when user click find nearest bins button it would show where the user is and (developing, coming soon..) the bins around the users
 
 4. Tips
 
@@ -32,10 +31,6 @@ the users
 2. Bins
 
     User are able to add a new bin into database
-
-3. Search
-
-    User are able to search a trash to find info about how to deal with it
 
 ## Set up
 Please `cd` into the repo first.
