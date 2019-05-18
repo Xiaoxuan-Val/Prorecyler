@@ -2,15 +2,30 @@ var mongoose = require('mongoose');
 var Bin = mongoose.model('bin');
 var Trash = mongoose.model('trashdb');
 var Tip = mongoose.model('tip');
-//const User = mongoose.model('users');
+var Question = mongoose.model('question');
 
 // show home page
-var welcome = function (req, res) {
+var welcome = (req, res) => {
     res.render("index");
 }
 
-var quiz = function (req, res) {
-    res.render('quiz');
+var game = (req, res) => {
+    res.render('game');
+}
+
+var createQuestion = (req, res) => { 
+    const question = new Question({
+        "question": req.body.question, 
+        "choices": req.body.choices,
+        "answer": req.body.answer
+    });
+    question.save((err, newQuestion) => {
+        if (err) {
+            res.sendStatus(404);
+        } else { 
+            res.send(newQuestion);
+        }
+    });
 }
 
 var showMaps = (req, res) => {
@@ -43,27 +58,27 @@ var findAllBins = (req, res) => {
     });
 };
 
-var findOneBin = function (req, res) {
-    var binInx = req.params.id;
-    Bin.findById(binInx, function (err, bin) {
-        if (err) {
-            res.sendStatus(404);
-        } else {
-            res.send(bin);
-        }
-    });
-};
+// var findOneBin = function (req, res) {
+//     var binInx = req.params.id;
+//     Bin.findById(binInx, function (err, bin) {
+//         if (err) {
+//             res.sendStatus(404);
+//         } else {
+//             res.send(bin);
+//         }
+//     });
+// };
 
-var findBinByType = function (req, res) {
-    var binType = req.params.type.toLowerCase();
-    Bin.find({ type: binType }, function (err, bins) {
-        if (err) {
-            res.sendStatus(404);
-        } else {
-            res.send(bins);
-        }
-    });
-};
+// var findBinByType = function (req, res) {
+//     var binType = req.params.type.toLowerCase();
+//     Bin.find({ type: binType }, function (err, bins) {
+//         if (err) {
+//             res.sendStatus(404);
+//         } else {
+//             res.send(bins);
+//         }
+//     });
+// };
 
 // show trash page
 var findAllTrashs = (req, res) => {
@@ -183,7 +198,7 @@ var addTrash = function(req, res){
     res.render('addTrashForm',{title: 'Add Trash'});
 }
 
-var createTrash = function(req, res){
+var createTrash = (req, res) => {
     const trash = new Trash({
         "name": req.body.name,
         "type": req.body.type,
@@ -191,7 +206,7 @@ var createTrash = function(req, res){
         "process": req.body.process,
 
     });
-    trash.save(function (err, newTrash) {
+    trash.save((err, newTrash) => {
         if (err) {
             res.sendStatus(500);
         } else {
@@ -214,7 +229,7 @@ var createBin = function(req, res){
         "location": req.body.location,
 
     });
-    bin.save(function (err, newBin) {
+    bin.save((err, newBin) => {
         if (err) {
             res.sendStatus(500);
         } else {
@@ -227,10 +242,9 @@ var createBin = function(req, res){
 }
 
 module.exports = {
-    welcome, quiz, showTips, showMaps, findAllBins, findOneBin, findBinByType,
-    findAllTrashs, findOneTrash,  Login, Logout, findTrashs,
-    Callback, Profile, authCheck, authUser, addTrash, createTrash, addBin, createBin,
+    welcome, Login, Logout, Callback, Profile, authCheck, authUser,
+    addTrash, createTrash, addBin, createBin, 
+    game, showTips, createQuestion, 
+    showMaps, findAllBins,
+    findAllTrashs, findOneTrash, findTrashs,
 };
-
-
-//getTrashByName

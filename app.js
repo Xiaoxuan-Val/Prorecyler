@@ -35,13 +35,23 @@ require('./models/db.js');
 // Routes setup
 var routes = require('./routes/routes.js');
 app.use('/', routes);
-var binRouter = require('./routes/bins');
-app.use('/bins', binRouter);
+
+var userRouter = require('./routes/users');
+app.use('/auth', userRouter);
+
 var trashRouter = require('./routes/trashs');
 app.use('/trashs', trashRouter);
+
 var mapRouter = require('./routes/maps');
 app.use('/maps', mapRouter);
 
+var binRouter = require('./routes/bins');
+app.use('/bins', binRouter);
+
+var gameRouter = require('./routes/games');
+app.use('/game', gameRouter);
+
+// Run project
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function(){
     console.log(`Express listening on port ${PORT}`);

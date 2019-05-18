@@ -7,9 +7,9 @@ var router = express.Router();
 router.get('/', controller.showMaps);
 
 // Find one bin by id
-router.get('/bins/:id', controller.findOneBin);
+// router.get('/bins/:id', controller.findOneBin);
 
 //Find bins by types
-router.get('/bins/:type', controller.findBinByType);
+// router.get('/bins/:type', controller.findBinByType);
 
 module.exports = router;
