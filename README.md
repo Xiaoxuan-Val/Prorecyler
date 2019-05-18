@@ -104,7 +104,11 @@ INFO30005-F4
 ```
 
 ## Reference
-Course content from week 1 to 7
+1. 
+    Course content from week 1 to 7
+
+2. 
+    
 
 ## Acknowledgement
 This project completed by Weijie Lin (905673), Xiaohan Liu(908471), Xiaoxuan Li (933206), Xun Zhang (854776), 
