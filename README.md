@@ -105,6 +105,7 @@ INFO30005-F4
 
 ## Reference
 Course content from week 1 to 7
+https://drive.google.com/drive/folders/0B8qiHDiC8qnbREljdGdUeWZfcEk
 
 ## Acknowledgement
 This project completed by Weijie Lin (905673), Xiaohan Liu(908471), Xiaoxuan Li (933206), Xun Zhang (854776), 
