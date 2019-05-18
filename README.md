@@ -2,13 +2,18 @@
 We are group F4, and our project is "prorecycler".
 
 ## Features
+### Bug found
+1. Map
+
+    Map function working well locally but failed on heroku
+
 ### Core Functions
 
 1. User
 
-    a.user can click the login botton and this would directly link to the google login page and if the user have google account, user could login the website using google account
+    a. User can click the login botton and this would directly link to the google login page and if the user have google account, user could login the website using google account
 
-    b.user could search the trash by name and this would come out the details about the trash
+    b. After log in, user can enter user center to add trash/bin data
 
 2. Search
 
@@ -16,7 +21,7 @@ We are group F4, and our project is "prorecycler".
 
 3. Map
 
-    there is a map when user click find nearest bins button it would show where the user is and (developing, coming soon..) the bins around the users
+    there is a map when user click find nearest bins button it would show where the user is and the bins around the users
 
 4. Tips
 
@@ -26,11 +31,9 @@ We are group F4, and our project is "prorecycler".
 
 1. Map
 
-    All nearby bins location are shown in Map
+    a. Press the marker of bins in the map will show the detail info of this bin.
 
-2. Bins
-
-    User are able to add a new bin into database
+    b. The marker color of bin will change according to the type of bin, e.g. recycling bin is yellow, landfill is read
 
 ## Set up
 Please `cd` into the repo first.
