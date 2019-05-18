@@ -9,8 +9,8 @@ router.get('/', controller.welcome);
 // tips page
 router.get('/tips', controller.showTips)
 
-// game page
-router.get('/game', controller.game)
+// quiz page
+router.get('/quiz', controller.quiz)
 
 //display user add form
 //router.get('/:add/:useradd', controller.getAddForm);

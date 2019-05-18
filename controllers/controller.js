@@ -9,8 +9,8 @@ var welcome = function (req, res) {
     res.render("index");
 }
 
-var game = function (req, res) {
-    res.send('Game comming soon...')
+var quiz = function (req, res) {
+    res.render('quiz');
 }
 
 var showMaps = (req, res) => {
@@ -227,7 +227,7 @@ var createBin = function(req, res){
 }
 
 module.exports = {
-    welcome, game, showTips, showMaps, findAllBins, findOneBin, findBinByType,
+    welcome, quiz, showTips, showMaps, findAllBins, findOneBin, findBinByType,
     findAllTrashs, findOneTrash,  Login, Logout, findTrashs,
     Callback, Profile, authCheck, authUser, addTrash, createTrash, addBin, createBin,
 };

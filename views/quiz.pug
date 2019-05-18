@@ -1,0 +1,28 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        title Quiz
+        link(rel='stylesheet', href='/css/quiz.css')
+    body
+        .grid
+            #quiz
+                h1 Quiz
+                hr(style='margin-bottom: 20px')
+                p#question
+                .buttons
+                    button#btn0
+                        span#choice0
+                    button#btn1
+                        span#choice1
+                    button#btn2
+                        span#choice2
+                    button#btn3
+                        span#choice3
+                hr(style='margin-top: 50px')
+                footer
+                    p#progress Question x of y
+        script
+            include quiz.js
+            include question.js
+            include quickquiz.js
