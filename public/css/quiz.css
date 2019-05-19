@@ -47,7 +47,7 @@ p{
     margin-top: 30px;
 }
 
-#btn0, #btn1, #btn2, #btn3 {
+#btn0, #btn1, #btn2, #btn3, #retry, #homepage {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     background-color: rgb(157,184,69);
     width: 250px;
