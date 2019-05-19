@@ -13,6 +13,16 @@ var game = (req, res) => {
     res.render('game');
 }
 
+var findAllQuestion = (req, res) => { 
+    Question.find((err, questions) => {
+        if (err) {
+            res.sendStatus(404);
+        } else {
+            res.json(questions);
+        }
+    });
+}
+
 var createQuestion = (req, res) => { 
     const question = new Question({
         "question": req.body.question, 
@@ -244,7 +254,7 @@ var createBin = function(req, res){
 module.exports = {
     welcome, Login, Logout, Callback, Profile, authCheck, authUser,
     addTrash, createTrash, addBin, createBin, 
-    game, showTips, createQuestion, 
+    game, showTips, findAllQuestion, createQuestion, 
     showMaps, findAllBins,
     findAllTrashs, findOneTrash, findTrashs,
 };
