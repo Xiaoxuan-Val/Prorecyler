@@ -90,11 +90,11 @@ input:active{
     position: absolute;
 }
 
-#tips-button{
+#quiz-button{
     cursor: pointer;
     background: transparent;
     border: none;
-    background-image: url(../images/FeelingTrashy.png);
+    background-image: url(../images/QuickQuiz.png);
     background-repeat: no-repeat;
     top: 480px;
     width: 224px;

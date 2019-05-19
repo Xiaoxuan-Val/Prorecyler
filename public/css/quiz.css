@@ -1,38 +1,46 @@
 body {
-    background-color: #eeeeee;
+    background-image: url(../images/Background.png);
+    position: relative;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
 .grid {
     width: 600px;
-    height: 500px;
+    height: 650px;
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
-    border: 2px solid #cbcbcb;
-    box-shadow: 10px 15px 5px #cbcbcb;
+    border: 2px solid rgb(56,87,35);
 }
 
 .grid h1 {
-    font-family: "sans-serif";
-    background-color: #57636e;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(56,87,35);
     font-size: 60px;
     text-align: center;
-    color: #ffffff;
+    color: white;
     padding: 2px 0px;
     border-radius: 50px;
 }
 
 #score {
-    color: #5A6772;
+    color: black;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .grid #question {
-    font-family: "monospace";
-    font-size: 30px;
-    color: #5A6772;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: black;
 }
 
 .buttons {
@@ -40,11 +48,12 @@ body {
 }
 
 #btn0, #btn1, #btn2, #btn3 {
-    background-color: #778897;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(157,184,69);
     width: 250px;
     font-size: 20px;
     color: #fff;
-    border: 1px solid #1D3C6A;
+    border: 1px solid rgb(56,87,35);
     border-radius: 50px;
     margin: 10px 40px 10px 0px;
     padding: 10px 10px;
@@ -52,7 +61,7 @@ body {
 
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
-    background-color: #57636e;
+    background-color: rgb(56,87,35);
 }
 
 #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
