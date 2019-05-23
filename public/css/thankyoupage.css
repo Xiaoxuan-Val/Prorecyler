@@ -1,32 +1,44 @@
-html {
-    margin: 0;
-    padding: 0;
-}
-
-body{
+body {
     background-image: url(../images/Background.png);
     position: relative;
     background-repeat: repeat;
     background-size: 100%;
 }
 
-p{
+h1{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    color: white;
-    text-align:left;
-    font-size: 25px;
-    background-color: rgb(56,87,35);
+    font-size: 39px;
+    text-align: center;
 }
 
-#back-to-home {
+a{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+
+.grid {
+    width: 600px;
+    height: 650px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(56,87,35);
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+#homepage {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    background-image: url(../images/BackToHome.png);
-    background-repeat: no-repeat;
-    top: 100px;
-    width: 224px;
-    height: 52px;
-    left: calc(10%);
-    position: absolute;
+    background-color: rgb(157,184,69);
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid rgb(56,87,35);
+    border-radius: 50px;
+    margin: 10px 25% 10px 25%;
+    padding: 10px 10px;
 }
