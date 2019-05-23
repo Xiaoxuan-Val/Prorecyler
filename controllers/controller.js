@@ -210,7 +210,7 @@ var addTrash = function(req, res){
 
 var createTrash = (req, res) => {
     const trash = new Trash({
-        "name": req.body.name,
+        "name": req.body.name.toLowerCase(),
         "type": req.body.type,
         "pic": req.body.pic,
         "process": req.body.process,
