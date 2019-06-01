@@ -23,17 +23,29 @@ var findAllQuestion = (req, res) => {
     });
 }
 
-var createQuestion = (req, res) => { 
+var createQuestion = (req, res) => {
     const question = new Question({
-        "question": req.body.question, 
+        "question": req.body.question,
         "choices": req.body.choices,
         "answer": req.body.answer
     });
     question.save((err, newQuestion) => {
         if (err) {
             res.sendStatus(404);
-        } else { 
+        } else {
             res.send(newQuestion);
+        }
+    });
+}
+
+var showAnswer = (req, res) => {
+    Question.find((err, questions) => {
+        if (err) {
+            res.sendStatus(404);
+        } else {
+            res.render('quizanswer', {
+                questions: questions
+            });
         }
     });
 }
@@ -254,7 +266,7 @@ var createBin = function(req, res){
 module.exports = {
     welcome, Login, Logout, Callback, Profile, authCheck, authUser,
     addTrash, createTrash, addBin, createBin, 
-    game, showTips, findAllQuestion, createQuestion, 
+    game, showTips, findAllQuestion, createQuestion, showAnswer,
     showMaps, findAllBins,
     findAllTrashs, findOneTrash, findTrashs,
 };
