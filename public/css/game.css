@@ -47,7 +47,7 @@ p{
     margin-top: 30px;
 }
 
-#btn0, #btn1, #btn2, #btn3, #retry, #homepage {
+#btn0, #btn1, #btn2, #btn3, #retry, #homepage, #answer {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
@@ -60,12 +60,14 @@ p{
     padding: 10px 10px;
 }
 
-#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover, #retry:hover, 
+#homepage:hover, #answer:hover {
     cursor: pointer;
     background-color: rgb(56,87,35);
 }
 
-#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus, #retry:focus, 
+#homepage:focus, #answer:focus {
     outline: 0;
 }
 
