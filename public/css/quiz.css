@@ -49,6 +49,7 @@ p{
 
 #btn0, #btn1, #btn2, #btn3, #retry, #homepage {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    cursor: pointer;
     background-color: rgb(157,184,69);
     width: 250px;
     font-size: 20px;

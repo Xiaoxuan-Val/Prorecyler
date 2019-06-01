@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/', controller.welcome);
 
 // tips page
-// router.get('/tips', controller.showTips)
+router.get('/tips', controller.showTips)
 
 //display user add form
 //router.get('/:add/:useradd', controller.getAddForm);

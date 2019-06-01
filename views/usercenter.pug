@@ -4,11 +4,14 @@ html
         title User Center
         link(rel='stylesheet', href='/css/usercenter.css')
     body
-        div
-            p In this page, you can add recycle sites or trash information into our database.
-            a(href='/auth/usercenter/addTrash')
-                button#add-trash-info
-            a(href='/auth/usercenter/addBin')
-                button#add-recycle-site
-            a(href='/auth/profile')
-                button#back-to-home
+        .grid
+            h1 User Centre
+                .buttons
+                    a(href='/auth/usercenter/addTrash')
+                        button#add-trash Add Trash Info
+                    a(href='/auth/usercenter/addBin')
+                        button#add-bin Add Bin Info
+                    a(href='/tips')
+                        button#pro-tips See Pro Tips
+                    a(href='/auth/profile')
+                        button#homepage Back to Homepage

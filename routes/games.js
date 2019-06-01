@@ -12,4 +12,8 @@ router.get('/questions', controller.findAllQuestion)
 // Create new game quiz question
 router.post('/questions', controller.createQuestion);
 
+// Create new game quiz question
+router.get('/answer', controller.showAnswer);
+
+
 module.exports = router;
