@@ -1,24 +1,27 @@
 doctype html
 html
     head
-        title Add Trash
-        link(rel='stylesheet', href='/css/trashaddform.css')
+        title Add Bin
+        link(rel='stylesheet', href='/css/addbin.css')
     body
         .grid
-            #form
-                h1 Bin Info Form
-                form(method='POST' action='/auth/usercenter/saveTrash')
-                    div
-                        label(for='type')
-                        a Type:
-                        input(type='text', placeholder='Enter bin type' name='type')
-                    div
-                        label(for='photo')
-                        a Picture:
-                        input(type='text', placeholder='Enter picture link' name='photo')
-                    div
-                        label(for='location')
-                        a Location:
-                        input(type='text', placeholder='[Longitude, Latitude]' name='location')
-                    .buttons
-                        button#submit Submit
+            h1 Bin Info Form
+            hr
+            form#addform(method='POST' action='/auth/usercenter/saveBin')
+                #type
+                    select#type-input(name='type')
+                        option(value="" disabled selected) Select bin type (Required)
+                        option mix
+                        option recycling
+                        option landfilled
+                        option e-waste
+                #photo
+                    input(type='text', placeholder='Enter picture link' name='photo')
+                #lat
+                    input#lat-input(type='text', placeholder='Latitude (Required)' name='lat')
+                #lng
+                    input#lng-input(type='text', placeholder='Longitude (Required)' name='lng')
+                #submit
+                    button(type="submit") Submit
+    script
+        include findlocal.js

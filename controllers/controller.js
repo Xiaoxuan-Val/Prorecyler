@@ -221,46 +221,68 @@ var addTrash = function(req, res){
 }
 
 var createTrash = (req, res) => {
-    const trash = new Trash({
-        "name": req.body.name.toLowerCase(),
-        "type": req.body.type,
-        "pic": req.body.pic,
-        "process": req.body.process,
+    var inputname = req.body.name.toLowerCase()
+    var inputtype = req.body.type
 
-    });
-    trash.save((err, newTrash) => {
-        if (err) {
-            res.sendStatus(500);
-        } else {
-            res.render('ThankYouPage', {
-                title: 'ThankYou'
-            });
+    if (inputname == null || inputtype == null) {
+        res.render('SorryPage', {
+            title: 'Error input'
+        });
+    } else {
+        const trash = new Trash({
+            "name": inputname,
+            "type": inputtype,
+            "pic": req.body.pic,
+            "process": req.body.process,
 
-        }
-    });
+        });
+        trash.save((err, newTrash) => {
+            if (err) {
+                res.sendStatus(500);
+            } else {
+                res.render('ThankYouPage', {
+                    title: 'ThankYou'
+                });
+            }
+        });
+    }
 }
 
 var addBin = function(req, res){
     res.render('addBinForm',{title: 'Add Bin'});
 }
 
-var createBin = function(req, res){
-    const bin = new Bin({
-        "type": req.body.type,
-        "photo": req.body.photo,
-        "location": req.body.location,
+var createBin = function (req, res) {
+    var lat = req.body.lat;
+    var lng = req.body.lng;
+    var inputtype = req.body.type;
 
-    });
-    bin.save((err, newBin) => {
-        if (err) {
-            res.sendStatus(500);
-        } else {
-            res.render('ThankYouPage', {
-                title: 'Thank You'
-            });
+    if (inputtype == null || lat == null || lng == null) {
+        res.render('SorryPage', {
+            title: 'Error input'
+        });
+    } else {
+        var location = []
+        location.push(lat);
+        location.push(lng);
 
-        }
-    });
+        const bin = new Bin({
+            "type": inputtype,
+            "photo": req.body.photo,
+            "location": location,
+
+        });
+        bin.save((err, newBin) => {
+            if (err) {
+                res.sendStatus(500);
+            } else {
+                res.render('ThankYouPage', {
+                    title: 'Thank You'
+                });
+
+            }
+        });
+    }
 }
 
 module.exports = {

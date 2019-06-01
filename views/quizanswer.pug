@@ -2,8 +2,19 @@ doctype html
 html
     head
         title Answer
+        link(rel='stylesheet', href='/css/quizanswer.css')
     body
-        #header
-        each sample in questions
-            p #{"Question : " + sample.question}
-            p #{"Answer : " + sample.answer}
+        .grid
+            #answer-content
+                h1 Quiz Answer
+                hr#tophr
+                each sample in questions
+                    .answer
+                        p#question #{"Question: " + sample.question}
+                        p#answer #{"Answer: " + sample.answer}
+                        hr#bottomhr
+                .buttons
+                    a(href='/game')
+                        button#retry Retry
+                    a(href='/auth/profile')
+                        button#homepage Back to Homepage

@@ -68,7 +68,6 @@ function showScores(quiz) {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
     gameOverHTML += "<button id='retry' onclick=\"window.location.href='/game'\">Retry</button>";
-    gameOverHTML += "<button id='homepage' onclick=\"window.location.href='/auth/google'\">Back to Homepage</button>";
     gameOverHTML += "<button id='answer' onclick=\"window.location.href='/game/answer'\">Get Answer</button>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
