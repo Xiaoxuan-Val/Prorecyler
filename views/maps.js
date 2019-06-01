@@ -13,6 +13,25 @@ window.initMap = () => {
         center: { lat: -37.7966434, lng: 144.9610147 },
         zoom: 15
     });
+
+    var iconBase =
+        'http://maps.google.com/mapfiles/ms/icons/';
+    
+    var icons = {
+        recycling: {
+            icon: iconBase + 'green-dot.png'
+        },
+        landfilled: { 
+            icon: iconBase + 'red-dot.png'
+        },
+        ewaste: {
+            icon: iconBase + 'purple-dot.png'
+        },
+        mix: {
+            icon: iconBase + 'blue-dot.png'
+        }
+    };
+
     infoWindow = new google.maps.InfoWindow;
 
     // Try HTML5 geolocation.
@@ -51,17 +70,28 @@ window.initMap = () => {
             var i;
             for (i = 0; i < bins.length; i++) {
                 var pos = { lat: bins[i].location[0], lng: bins[i].location[1] };
-                // var infocontent = '<p><b>Type: </b>' + bins[i].type + '</p>';
+                var bintype = bins[i].type;
+                var infocontent = '<p><b>Type: </b>' + bintype + '</p>';
+
+                if (bintype == 'e-waste') { 
+                    bintype = 'ewaste';
+                }
+
+                console.log(bintype);
+
                 var marker = new google.maps.Marker({
                     position: pos,
+                    icon: icons[bintype].icon,
                     map: map
                 });
-                // var infowindow = new google.maps.InfoWindow({
-                //     content: infocontent
-                // });
-                // marker.addListener('click', () => { 
-                //     infowindow.open(map, marker);
-                // });
+                
+                //Attach click event to the marker.
+                (function (marker, infocontent) {
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        infoWindow.setContent(infocontent);
+                        infoWindow.open(map, marker);
+                    });
+                })(marker, infocontent);
             }
         }
     }
