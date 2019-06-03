@@ -6,7 +6,9 @@ var Question = mongoose.model('question');
 
 // show home page
 var welcome = (req, res) => {
-    res.render("index");
+    res.render("index", {
+        user: req.user
+    });
 }
 
 var game = (req, res) => {

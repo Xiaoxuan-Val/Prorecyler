@@ -1,15 +1,3 @@
-html {
-	margin: 0;
-    padding: 0;
-}
-
-body{
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
-}
-
 #logo{
     display: block;
     background-image: url(../images/logo.png);
@@ -109,7 +97,8 @@ input:active{
     border: none;
     background-image: url(../images/Login.png);
     background-repeat: no-repeat;
-    top: 22.5px;
+    /* top: 22.5px; */
+    top:80px;
     width: 116px;
     height: 52px;
     left: calc(85%);

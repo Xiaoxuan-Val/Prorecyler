@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel='stylesheet', href='/css/styles.css')
+        block css
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        div
+            .nav-menu
+                .nav-con.fl
+                    ul
+                        li.nav-item.home
+                            a(href='/') Home
+                        li.nav-item.map
+                            a(href='/maps') Map
+                        li.nav-item.game
+                            a(href='/game') Quiz
+                .nav-con.fr
+                    ul
+                        li
+                            p Welcome, #{user.userName}
+                        li.nav-item.usercentre
+                            a(href='/auth/usercenter') User Centre
+                        li.nav-item.login
+                            a(href='/auth/google') Logout
+            .content
+                block content

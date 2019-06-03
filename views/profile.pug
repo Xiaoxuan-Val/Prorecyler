@@ -1,19 +1,15 @@
-doctype html
-html
-    head
-        title prorecycler
-        link(rel='stylesheet', href='/css/indexlogged.css')
-    body
-        div
-            p Welcome, #{user.userName}.
-            a(href='/auth/usercenter')
-                button#user-centre
-            #logo
-            #search-bar
-                form(method='POST' action='/trashs/find')
-                    input(type='text', placeholder='Search trash' name='search')
-                    button#search-bar-submit(type='submit')
-            a(href='/maps')
-                button#maps-button
-            a(href='/game')
-                button#quiz-button
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/index.css')
+
+block content
+    #logo
+    #search-bar
+        form(method='POST' action='/trashs/find')
+            input(type='text', placeholder='Search trash' name='search')
+            button#search-bar-submit(type='submit')
+    a(href='/maps')
+        button#maps-button
+    a(href='/game')
+        button#quiz-button

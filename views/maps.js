@@ -21,7 +21,7 @@ window.initMap = () => {
         recycling: {
             icon: iconBase + 'green-dot.png'
         },
-        landfilled: { 
+        landfill: { 
             icon: iconBase + 'red-dot.png'
         },
         ewaste: {
