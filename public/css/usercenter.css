@@ -8,8 +8,37 @@ hr{
     margin-top: 30px;
 }
 
+@media screen and (min-width: 1000px) {
+    .usercentre-container{
+        margin: 5% 20%;
+    }
+    button{
+        width: 50%;
+        margin: 20px 25%;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1000px) {
+    .usercentre-container{
+        margin: 5% 10%;
+    }
+    button{
+        width: 70%;
+        margin: 15px 15%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px) {
+    .usercentre-container{
+        margin: 5% 5%;
+    }
+    button{
+        width: 100%;
+        margin: 10px 0%;
+    }
+}
+
 .usercentre-container{
-    margin: 5% 20% 5% 20%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
@@ -41,12 +70,10 @@ button {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
-    width: 50%;
     font-size: 20px;
     color: #fff;
     border: 1px solid rgb(56,87,35);
     border-radius: 50px;
-    margin: 30px 25% 30px 25%;
     padding: 25px 10px 25px 10px;
 }
 
