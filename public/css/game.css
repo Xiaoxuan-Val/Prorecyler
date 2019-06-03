@@ -1,26 +1,16 @@
-body {
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
-}
-
-p{
-    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 13px;
-}
-
-.grid {
+#quiz {
     width: 600px;
-    height: auto;
-    margin: 0 auto;
-    background-color: #fff;
+    border: 1px solid rgb(56,87,35);
+    border-radius: 50px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 50px 50px 50px;
 }
 
+
 h1 {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    background-color: rgb(56,87,35);
+    background-color: rgba(56, 87, 35, 0.9);
     font-size: 60px;
     text-align: center;
     color: white;
@@ -28,18 +18,14 @@ h1 {
     border-radius: 50px;
 }
 
-#tophr {
-    margin-bottom: 30px;
-}
-
 #bottomhr {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7em 10em 10em auto;
+    grid-template-rows: 8em 9em 9em;
     grid-template-areas:
             "question question"
             "btn0 btn1"
@@ -74,24 +60,45 @@ h1 {
     font-size: 26px;
     color: black;
     grid-area: question;
-    justify-self: center;
-}
-
-.buttons {
-    margin-top: 30px;
+    text-align: center;
+    margin: auto;
 }
 
 #btn0, #btn1, #btn2, #btn3, #retry, #answer {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
-    width: 250px;
+    
     font-size: 20px;
     color: #fff;
     border: 1px solid rgb(56,87,35);
     border-radius: 50px;
-    margin: 10px 40px 10px 0px;
-    padding: 10px 10px;
+    margin: auto;
+}
+
+#btn0, #btn1, #btn2, #btn3 {
+    height: 120px;
+    width: 250px;
+}
+
+#retry, #answer {
+    height: 65px;
+    width: 160px;
+}
+
+#buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "retry answer";
+}
+
+#retry {
+    grid-area: retry;
+}
+
+#answer {
+    grid-area: answer;
 }
 
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover, #retry:hover, #answer:hover {
@@ -105,5 +112,6 @@ h1 {
 
 #progress {
     color: #2b2b2b;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }

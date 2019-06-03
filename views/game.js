@@ -67,8 +67,8 @@ function showProgress(quiz) {
 function showScores(quiz) {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
-    gameOverHTML += "<button id='retry' onclick=\"window.location.href='/game'\">Retry</button>";
-    gameOverHTML += "<button id='answer' onclick=\"window.location.href='/game/answer'\">Get Answer</button>";
+    gameOverHTML += "<div id=buttons><button id='retry' onclick=\"window.location.href='/game'\">Retry</button>";
+    gameOverHTML += "<button id='answer' onclick=\"window.location.href='/game/answer'\">Get Answer</button></div>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 }
