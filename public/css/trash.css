@@ -21,30 +21,57 @@ p{
     font-size: 26px;
 }
 
-#info{
-    position: absolute;
-    background-color: rgb(84, 130, 53);
-    width: 518px;
-    height: 100%;
+.grid {
+    width: 100vw;
+    height: 100vh;
 }
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+            "info pic";
+}
+
+#info {
+    background-color: rgb(56,87,35);
+    display: grid;
+    grid-template-rows: 10em 7em 5em 7em 5em auto;
+    grid-template-areas:
+            "title"
+            "type-title"
+            "type"
+            "process-title"
+            "process"
+            "background";
+}
+
 #title{
-    top: 50px;
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: title;
+    justify-self: center;
 }
+
+#type-title{
+    grid-area: type-title;
+    justify-self: center;
+}
+
 #type{
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: type;
+    justify-self: center;
 }
+
+#process-title{
+    grid-area: process-title;
+    justify-self: center;
+}
+
 #process{
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: process;
+    justify-self: center;
 }
+
 #pic{
-    position: absolute;
-    top: 200px;
-    left: calc((100% - 518px) / 2 - 500px / 2 + 518px);
+    grid-area: pic;
+    justify-self: center;
 }

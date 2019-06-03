@@ -4,17 +4,18 @@ html
         title trash
         link(rel='stylesheet', href='/css/trash.css')
     body
-        div
-            #info
-                #title
-                    h1 #{trash.name}
-                #type 
-                    h2 Type
-                    p #{trash.type}
-                #process 
-                    h2 Process
-                    p #{trash.process}
-                a(href = '/map')
-                    butoon#map
-            #pic
-                img.image(src = trash.pic)
+        .grid
+            #container
+                #info
+                    #title
+                        h1 #{trash.name}
+                    #type-title
+                        h2 Type
+                    #type
+                        p #{trash.type}
+                    #process-title
+                        h2 Process
+                    #process
+                        p #{trash.process}
+                #pic
+                    img.image(src = trash.pic)
