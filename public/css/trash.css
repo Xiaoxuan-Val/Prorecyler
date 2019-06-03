@@ -18,13 +18,15 @@ p{
 
 .grid {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    margin: 0 auto;
+
 }
 
 #container {
     display: grid;
     justify-items: stretch;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-areas:
             "words pic";
 }
@@ -41,7 +43,8 @@ p{
     grid-area: info;
     display: grid;
     justify-self: center;
-    grid-template-rows: 10em 7em 5em 7em 5em auto;
+    padding: 10px 50px 50px 50px;
+    grid-template-rows: auto 7em 5em 7em 5em;
     grid-template-areas:
             "title"
             "type-title"
@@ -53,22 +56,27 @@ p{
 
 #title{
     grid-area: title;
+    justify-self: center;
 }
 
 #type-title{
     grid-area: type-title;
+    justify-self: center;
 }
 
 #type{
     grid-area: type;
+    justify-self: center;
 }
 
 #process-title{
     grid-area: process-title;
+    justify-self: center;
 }
 
 #process{
     grid-area: process;
+    justify-self: center;
 }
 
 #pic{
