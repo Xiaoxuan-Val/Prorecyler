@@ -1,11 +1,6 @@
 h1{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 39px;
     text-align: center;
-}
-
-hr{
-    margin-top: 30px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -15,6 +10,12 @@ hr{
     button{
         width: 50%;
         margin: 20px 25%;
+    }
+    h1{
+        font-size: 39px;
+    }
+    button {
+        font-size: 26px;
     }
 }
 
@@ -26,6 +27,12 @@ hr{
         width: 70%;
         margin: 15px 15%;
     }
+    h1{
+        font-size: 30px;
+    }
+    button {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 520px) {
@@ -35,6 +42,15 @@ hr{
     button{
         width: 100%;
         margin: 10px 0%;
+    }
+    h1{
+        font-size: 21px;
+    }
+    button {
+        font-size: 14px;
+    }
+    hr{
+        display: none;
     }
 }
 
@@ -70,7 +86,6 @@ button {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
-    font-size: 20px;
     color: #fff;
     border: 1px solid rgb(56,87,35);
     border-radius: 50px;
