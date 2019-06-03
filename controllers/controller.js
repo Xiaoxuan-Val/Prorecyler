@@ -7,12 +7,16 @@ var Question = mongoose.model('question');
 // show home page
 var welcome = (req, res) => {
     res.render("index", {
+        title: 'Prorecycler',
         user: req.user
     });
 }
 
 var game = (req, res) => {
-    res.render('game');
+    res.render('game', {
+        title: 'Quiz Game',
+        user: req.user
+    });
 }
 
 var findAllQuestion = (req, res) => { 
@@ -46,6 +50,8 @@ var showAnswer = (req, res) => {
             res.sendStatus(404);
         } else {
             res.render('quizanswer', {
+                title: 'Quiz Answer',
+                user: req.user,
                 questions: questions
             });
         }
@@ -53,7 +59,10 @@ var showAnswer = (req, res) => {
 }
 
 var showMaps = (req, res) => {
-    res.render('maps');
+    res.render('maps', {
+        title: 'Map',
+        user: req.user
+    });
 }
 
 var showTips = (req, res) => {
@@ -65,6 +74,8 @@ var showTips = (req, res) => {
             } else {
                 // res.send(result);
                 res.render('tips', {
+                    title: 'Pro tips',
+                    user: req.user,
                     tip: tip
                 });
             }
@@ -91,6 +102,8 @@ var findAllTrashs = (req, res) => {
         } else {
             // res.send(trash);
             res.render('alltrash', {
+                title: 'All trash results',
+                user: req.user,
                 trashs: trashs
             });
         }
@@ -105,6 +118,8 @@ var findOneTrash = (req, res) => {
         } else {
             // res.send(trash);
             res.render('trash', {
+                title: 'Trash result',
+                user: req.user,
                 trash: trash
             });
         }
@@ -118,6 +133,8 @@ var findTrashs = (req, res) => {
             res.sendStatus(404);
         } else if (trashs.length > 0) {
             res.render('searchresult', {
+                title: 'Search results',
+                user: req.user,
                 trashs: trashs,
                 resultcount: trashs.length
             });
@@ -127,6 +144,8 @@ var findTrashs = (req, res) => {
                     res.sendStatus(404);
                 } else {
                     res.render('searchresult', {
+                        title: 'Search results',
+                        user: req.user,
                         trashs: trashs,
                         resultcount: trashs.length
                     });
@@ -176,8 +195,7 @@ var Logout = function (req, res){
 }
 
 var Callback = function (req, res){
-    //res.send(req.user);
-    res.redirect('/auth/profile/');
+    res.redirect('/');
 }
 
 const authCheck = (req,res, next) => {
@@ -191,11 +209,17 @@ const authCheck = (req,res, next) => {
 };
 
 var authUser = function(req, res){
-    res.render('usercenter',{title: 'User Center'});
+    res.render('usercenter', {
+        title: 'User Center',
+        user: req.user
+    });
 }
 
 var addTrash = function(req, res){
-    res.render('addTrashForm',{title: 'Add Trash'});
+    res.render('addTrashForm', {
+        title: 'Add Trash',
+        user: req.user
+    });
 }
 
 var createTrash = (req, res) => {
@@ -204,7 +228,8 @@ var createTrash = (req, res) => {
 
     if (inputname == null || inputtype == null) {
         res.render('SorryPage', {
-            title: 'Error input'
+            title: 'Error input',
+            user: req.user
         });
     } else {
         const trash = new Trash({
@@ -219,7 +244,8 @@ var createTrash = (req, res) => {
                 res.sendStatus(500);
             } else {
                 res.render('ThankYouPage', {
-                    title: 'ThankYou'
+                    title: 'ThankYou',
+                    user: req.user
                 });
             }
         });
@@ -227,7 +253,10 @@ var createTrash = (req, res) => {
 }
 
 var addBin = function(req, res){
-    res.render('addBinForm',{title: 'Add Bin'});
+    res.render('addBinForm', {
+        title: 'Add Bin',
+        user: req.user
+    });
 }
 
 var createBin = function (req, res) {
@@ -237,7 +266,8 @@ var createBin = function (req, res) {
 
     if (inputtype == null || lat == null || lng == null) {
         res.render('SorryPage', {
-            title: 'Error input'
+            title: 'Error input',
+            user: req.user
         });
     } else {
         var location = []
@@ -255,7 +285,8 @@ var createBin = function (req, res) {
                 res.sendStatus(500);
             } else {
                 res.render('ThankYouPage', {
-                    title: 'Thank You'
+                    title: 'Thank You',
+                    user: req.user
                 });
 
             }

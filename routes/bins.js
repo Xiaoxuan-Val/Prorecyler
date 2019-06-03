@@ -7,6 +7,6 @@ var router = express.Router();
 router.get('/', controller.findAllBins);
 
 // Create new bin
-router.post('/', controller.createBin);
+router.post('/', controller.authCheck, controller.createBin);
 
 module.exports = router;

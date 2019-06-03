@@ -1,15 +1,15 @@
-doctype html
-html
-    head
-        title Thank You
-        link(rel='stylesheet', href='/css/feedbackpage.css')
-    body
-        .grid
-            #content
-                p Please Fill All Required Field!
-            #add-btn
-                a(href='/auth/usercenter')
-                    button Back to Usercentre
-            #home-btn
-                a(href='/auth/profile')
-                    button Back to Homepage
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/feedbackpage.css')
+
+block content
+    .grid
+        #content
+            p Please Fill All Required Field!
+        #add-btn
+            a(href='/auth/usercenter')
+                button Back to Usercentre
+        #home-btn
+            a(href='/auth/profile')
+                button Back to Homepage

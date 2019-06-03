@@ -1,22 +1,22 @@
-doctype html
-html
-    head
-        title User Center
+extend default
+
+block css
         link(rel='stylesheet', href='/css/usercenter.css')
-    body
-        .grid
-            h1 User Centre
-            hr
-            #container
-                #btn0
-                    a(href='/auth/usercenter/addTrash')
-                        button Add Trash Info
-                #btn1
-                    a(href='/auth/usercenter/addBin')
-                        button Add Bin Info
-                #btn2
-                    a(href='/tips')
-                        button See Pro Tips
-                #btn3
-                    a(href='/auth/profile')
-                        button Back to Homepage
+
+block content
+    .grid
+        h1 User Centre
+        hr
+        #container
+            #btn0
+                a(href='/auth/usercenter/addTrash')
+                    button Add Trash Info
+            #btn1
+                a(href='/auth/usercenter/addBin')
+                    button Add Bin Info
+            #btn2
+                a(href='/tips')
+                    button See Pro Tips
+            #btn3
+                a(href='/auth/profile')
+                    button Back to Homepage

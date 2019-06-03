@@ -1,10 +1,10 @@
-doctype html
-html
-    head
-        title AllTrash
-        link(rel='stylesheet', href='/css/trash_index.css')
-    body
-        #header
-        each trash in trashs
-            a(href=`./trashs/${trash.id}`)
-                #box #{trash.name}
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/trash_index.css')
+
+block content
+    #header
+    each trash in trashs
+        a(href=`./trashs/${trash.id}`)
+            #box #{trash.name}

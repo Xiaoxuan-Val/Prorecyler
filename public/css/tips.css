@@ -22,6 +22,7 @@ p{
     display: grid;
     justify-items: center;
     background-color: #fff;
+    opacity:0.8;
     grid-template-columns: 2fr 3fr;
     grid-template-areas:
             "title title"
@@ -34,6 +35,7 @@ p{
 
 #pic {
     grid-area: pic;
+    
 }
 
 #content {

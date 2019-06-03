@@ -1,14 +1,14 @@
-doctype html
-html
-    head
-        title proTips
-        link(rel='stylesheet', href='/css/tips.css')
-    body
-        .grid
-            #container
-                #title
-                    h1 Pro Tips
-                #content
-                    p #{tip.content}
-                #pic
-                    img.image(src = tip.pic)
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/tips.css')
+
+block content
+    .grid
+        #container
+            #title
+                h1 Pro Tips
+            #content
+                p #{tip.content}
+            #pic
+                img.image(src = tip.pic)

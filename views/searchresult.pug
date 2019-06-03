@@ -1,25 +1,25 @@
-doctype html
-html
-    head
-        title SearchResult
-        link(rel='stylesheet', href='/css/searchresult.css')
-    body
-        .grid
-            #container
-                #logo
-                #search
-                #search-bar
-                    form(method='POST' action='/trashs/find')
-                        input(type='text', placeholder='Search trash' name='search')
-                        button#search-bar-submit(type='submit')
-                a(href='/trashs')
-                    button#show-all-trash-button
-                a(href='/auth/usercenter')
-                    button#add-own-data-button
-                #result
-                    p #{resultcount} results found. You can also add data to our database.
-                    each trash in trashs
-                        #result-content
-                            a(href=`/trashs/${trash.id}`)
-                                h1 #{trash.name}
-                            p Type: #{trash.type}
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/searchresult.css')
+
+block content
+    .grid
+        #container
+            #logo
+            #search
+            #search-bar
+                form(method='POST' action='/trashs/find')
+                    input(type='text', placeholder='Search trash' name='search')
+                    button#search-bar-submit(type='submit')
+            a(href='/trashs')
+                button#show-all-trash-button
+            a(href='/auth/usercenter')
+                button#add-own-data-button
+            #result
+                p #{resultcount} results found. You can also add data to our database.
+                each trash in trashs
+                    #result-content
+                        a(href=`/trashs/${trash.id}`)
+                            h1 #{trash.name}
+                        p Type: #{trash.type}

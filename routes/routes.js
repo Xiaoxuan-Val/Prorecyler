@@ -7,6 +7,6 @@ var router = express.Router();
 router.get('/', controller.authCheck, controller.welcome);
 
 // tips page
-router.get('/tips', controller.showTips)
+router.get('/tips', controller.authCheck, controller.showTips)
 
 module.exports = router;

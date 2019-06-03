@@ -14,18 +14,16 @@ router.get('/google', passport.authenticate('google', {
 }));
 //callback route for google to redirect to
 router.get('/google/redirect', passport.authenticate('google'), controller.Callback);
-//redirect page
-// router.get('/profile', controller.authCheck, controller.Profile);
 
 //user center page
-router.get('/usercenter', controller.authUser);
+router.get('/usercenter', controller.authCheck, controller.authUser);
 //user get add trash form
-router.get('/usercenter/addTrash', controller.addTrash);
+router.get('/usercenter/addTrash', controller.authCheck, controller.addTrash);
 //user save trash to data base
-router.post('/usercenter/saveTrash', controller.createTrash);
+router.post('/usercenter/saveTrash', controller.authCheck, controller.createTrash);
 //user get add bin form
-router.get('/usercenter/addBin', controller.addBin);
+router.get('/usercenter/addBin', controller.authCheck, controller.addBin);
 //user save bin to data base
-router.post('/usercenter/saveBin', controller.createBin);
+router.post('/usercenter/saveBin', controller.authCheck, controller.createBin);
 
 module.exports = router;

@@ -78,6 +78,10 @@ input:active{
     position: absolute;
 }
 
+#maps-button:focus{
+    outline: none;
+}
+
 #quiz-button{
     cursor: pointer;
     background: transparent;

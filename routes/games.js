@@ -4,7 +4,7 @@ var controller = require('../controllers/controller.js');
 var router = express.Router();
 
 // Play game
-router.get('/', controller.game);
+router.get('/', controller.authCheck, controller.game);
 
 // Get all game quiz question
 router.get('/questions', controller.findAllQuestion)
@@ -13,7 +13,7 @@ router.get('/questions', controller.findAllQuestion)
 router.post('/questions', controller.createQuestion);
 
 // Create new game quiz question
-router.get('/answer', controller.showAnswer);
+router.get('/answer', controller.authCheck, controller.showAnswer);
 
 
 module.exports = router;
