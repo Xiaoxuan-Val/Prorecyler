@@ -1,17 +1,158 @@
-#quiz {
-    width: 600px;
-    border: 5px solid rgb(56,87,35);
-    border-radius: 50px;
-    margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 50px 50px 50px;
+@media screen and (min-width: 769px) {
+    #quiz {
+        margin: 30px auto;
+        width: 600px;
+        padding: 10px 50px 50px 50px;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 8em 9em 9em;
+        grid-template-areas:
+                "question question"
+                "btn0 btn1"
+                "btn2 btn3";
+    }
+    h1{
+        font-size: 60px;
+    }
+
+    #score {
+        font-size: 26px;
+    }
+
+    #question {
+        font-size: 26px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 20px;
+        border-radius: 50px;
+    }
+    
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 120px;
+        width: 250px;
+    }
+
+    #retry, #answer {
+        height: 65px;
+        width: 160px;
+    }
+    #progress {
+        font-size: 18px;
+    }
 }
 
+@media screen and (min-width: 520px) and (max-width: 768px) {
+    #quiz {
+        margin: 20px auto;
+        width: 400px;
+        padding: 10px 50px 50px 50px;
+    }
+
+    #container {
+        display: grid;
+        grid-template-rows: 5em 5em 5em 5em 5em;
+        grid-template-areas:
+            "question"
+            "btn0"
+            "btn1"
+            "btn2"
+            "btn3";
+    }
+
+    #question {
+        font-size: 20px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    #score {
+        font-size: 24px;
+    }
+
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 70px;
+        width: 250px;
+        border-radius: 30px;
+    }
+
+    #retry, #answer {
+        height: 65px;
+        width: 120px;
+        border-radius: 50px;
+    }
+    #progress {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px) {
+    #quiz {
+        margin: 10px auto;
+        width: 250px;
+        padding: 10px 15px;
+    }
+    #container {
+        display: grid;
+        grid-template-rows: 4.5em 3.8em 3.8em 3.8em 3.8em;
+        grid-template-areas:
+            "question"
+            "btn0"
+            "btn1"
+            "btn2"
+            "btn3";
+    }
+    h1{
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    #score {
+        font-size: 18px;
+    }
+
+    #question {
+        font-size: 14px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 12px;
+    }
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 50px;
+        width: 200px;
+        border-radius: 30px;
+    }
+
+    #retry, #answer {
+        height: 30px;
+        width: 100px;
+        border-radius: 30px;
+    }
+    #progress {
+        font-size: 12px;
+    }
+
+    hr{
+        display: none;
+    }
+}
+
+#quiz {
+    border: 5px solid rgb(56,87,35);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
 h1 {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     background-color: rgba(56, 87, 35, 0.9);
-    font-size: 60px;
     text-align: center;
     color: white;
     padding: 2px 0px;
@@ -20,16 +161,6 @@ h1 {
 
 #bottomhr {
     margin-top: 30px;
-}
-
-#container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8em 9em 9em;
-    grid-template-areas:
-            "question question"
-            "btn0 btn1"
-            "btn2 btn3";
 }
 
 #btn0 {
@@ -48,19 +179,14 @@ h1 {
     grid-area: btn3;
 }
 
-#score {
+#score, #question {
     color: black;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 26px;
 }
 
 #question {
-    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 26px;
-    color: black;
     grid-area: question;
-    text-align: center;
     margin: auto;
 }
 
@@ -68,22 +194,9 @@ h1 {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
-    
-    font-size: 20px;
     color: #fff;
     border: 1px solid rgb(56,87,35);
-    border-radius: 50px;
     margin: auto;
-}
-
-#btn0, #btn1, #btn2, #btn3 {
-    height: 120px;
-    width: 250px;
-}
-
-#retry, #answer {
-    height: 65px;
-    width: 160px;
 }
 
 #buttons {
@@ -113,5 +226,4 @@ h1 {
 #progress {
     color: #2b2b2b;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
 }
