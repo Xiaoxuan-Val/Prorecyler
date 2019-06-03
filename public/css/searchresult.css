@@ -1,12 +1,5 @@
 body {
-    margin: 0;
-    padding: 0;
     background-color: rgb(84, 130, 53);
-}
-
-p{
-    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    font-size: 26px;
 }
 
 h1{
@@ -14,6 +7,11 @@ h1{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 39px;
     color: rgb(84, 130, 53);
+}
+
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 26px;
 }
 
 #search{

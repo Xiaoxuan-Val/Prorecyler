@@ -1,8 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
 h1{
     color: white;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
@@ -28,14 +23,16 @@ p{
 
 #container {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
             "info pic";
 }
 
 #info {
-    background-color: rgb(56,87,35);
+    background-color: rgb(84, 130, 53);
     display: grid;
+    justify-items: center;
     grid-template-rows: 10em 7em 5em 7em 5em auto;
     grid-template-areas:
             "title"
@@ -48,30 +45,24 @@ p{
 
 #title{
     grid-area: title;
-    justify-self: center;
 }
 
 #type-title{
     grid-area: type-title;
-    justify-self: center;
 }
 
 #type{
     grid-area: type;
-    justify-self: center;
 }
 
 #process-title{
     grid-area: process-title;
-    justify-self: center;
 }
 
 #process{
     grid-area: process;
-    justify-self: center;
 }
 
 #pic{
     grid-area: pic;
-    justify-self: center;
 }
