@@ -54,7 +54,7 @@ p{
     margin-top: 30px;
 }
 
-#retry, #homepage {
+#retry{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
@@ -67,11 +67,11 @@ p{
     padding: 10px 10px;
 }
 
-#retry:hover, #homepage:hover {
+#retry:hover {
     cursor: pointer;
     background-color: rgb(56,87,35);
 }
 
-#retry:focus, #homepage:focus {
+#retry:focus {
     outline: 0;
 }

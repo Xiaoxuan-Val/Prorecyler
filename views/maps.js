@@ -77,8 +77,6 @@ window.initMap = () => {
                     bintype = 'ewaste';
                 }
 
-                console.log(bintype);
-
                 var marker = new google.maps.Marker({
                     position: pos,
                     icon: icons[bintype].icon,

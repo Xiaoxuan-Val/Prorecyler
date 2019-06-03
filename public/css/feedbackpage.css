@@ -1,10 +1,3 @@
-body {
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
-}
-
 p{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 39px;
@@ -15,52 +8,13 @@ p{
     width: 600px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 10px 50px 50px 50px;
     border-radius: 50px;
     border: 2px solid rgb(56,87,35);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 15px;
     grid-template-areas: 
-        "content content"
-        "add home";
+        "content";
 }
 
 #content {
     grid-area: content;
-}
-
-#add-btn {
-    grid-area: add;
-}
-
-#home-btn {
-    grid-area: home;
-}
-
-.buttons {
-    margin-top: 30px;
-}
-
-button {
-    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    background-color: rgb(157,184,69);
-    width: 180px;
-    height: 80px;
-    font-size: 20px;
-    color: #fff;
-    border: 1px solid rgb(56,87,35);
-    border-radius: 20px;
-    margin: 10px 20% 10px 20%;
-    padding: 10px 10px;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: rgb(56,87,35);
-}
-button:focus{
-    outline: none;
 }
