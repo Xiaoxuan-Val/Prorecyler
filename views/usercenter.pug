@@ -7,12 +7,16 @@ html
         .grid
             h1 User Centre
             hr
-            .buttons
-                a(href='/auth/usercenter/addTrash')
-                    button#add-trash Add Trash Info
-                a(href='/auth/usercenter/addBin')
-                    button#add-bin Add Bin Info
-                a(href='/tips')
-                    button#pro-tips See Pro Tips
-                a(href='/auth/profile')
-                    button#homepage Back to Homepage
+            #container
+                #btn0
+                    a(href='/auth/usercenter/addTrash')
+                        button Add Trash Info
+                #btn1
+                    a(href='/auth/usercenter/addBin')
+                        button Add Bin Info
+                #btn2
+                    a(href='/tips')
+                        button See Pro Tips
+                #btn3
+                    a(href='/auth/profile')
+                        button Back to Homepage

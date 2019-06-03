@@ -1,8 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
 h1{
     color: white;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
@@ -21,30 +16,53 @@ p{
     font-size: 26px;
 }
 
-#info{
-    position: absolute;
+.grid {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+            "info pic";
+}
+
+#info {
     background-color: rgb(84, 130, 53);
-    width: 518px;
-    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 10em 7em 5em 7em 5em auto;
+    grid-template-areas:
+            "title"
+            "type-title"
+            "type"
+            "process-title"
+            "process"
+            "background";
 }
+
 #title{
-    top: 50px;
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: title;
 }
+
+#type-title{
+    grid-area: type-title;
+}
+
 #type{
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: type;
 }
+
+#process-title{
+    grid-area: process-title;
+}
+
 #process{
-    height: 200px;
-    width: 518px;
-    text-align: center;
+    grid-area: process;
 }
+
 #pic{
-    position: absolute;
-    top: 200px;
-    left: calc((100% - 518px) / 2 - 500px / 2 + 518px);
+    grid-area: pic;
 }

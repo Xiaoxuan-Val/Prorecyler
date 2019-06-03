@@ -24,11 +24,33 @@ hr{
     border: 2px solid rgb(56,87,35);
 }
 
-.buttons {
+#container {
     margin-top: 30px;
+    display: grid;
+    grid-template-areas:
+            "btn0"
+            "btn1"
+            "btn2"
+            "btn3";
 }
 
-#add-trash, #add-bin, #pro-tips, #homepage {
+#btn0 {
+    grid-area: btn0;
+}
+
+#btn1 {
+    grid-area: btn1;
+}
+
+#btn2 {
+    grid-area: btn2;
+}
+
+#btn3 {
+    grid-area: btn3;
+}
+
+button {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: rgb(157,184,69);
@@ -41,7 +63,7 @@ hr{
     padding: 25px 10px 25px 10px;
 }
 
-#add-trash:hover, #add-bin:hover, #pro-tips:hover, #homepage:hover {
+button:hover{
     cursor: pointer;
     background-color: rgb(56,87,35);
 }
