@@ -138,72 +138,28 @@ button:focus{
         padding: 10px 10px;
         float: right;
     }
-
-    button:hover {
-        cursor: pointer;
-        background-color: rgb(56,87,35);
-    }
-    button:focus{
-        outline: none;
-    }
 }
 
 @media screen and (min-width: 520px) and (max-width: 1000px){
-    .addtrash-container {
-        margin: 5% 20% 5% 20%;
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 10px 50px 50px 50px;
-        border-radius: 50px;
-        border: 5px solid rgb(56,87,35);
-    }
     button {
-        font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-        cursor: pointer;
-        background-color: rgb(157,184,69);
-        width: 33%;
         font-size: 15px;
         color: #fff;
         border: 1px solid rgb(56,87,35);
-        border-radius: 10px;
+        border-radius: 50px;
         padding: 10px 10px;
-        float: right;
-    }
-
-    button:hover {
-        cursor: pointer;
-        background-color: rgb(56,87,35);
-    }
-    button:focus{
-        outline: none;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 520px) {
     .addtrash-container {
         margin: 1% 4% 1% 4%;
-        background-color: rgba(255, 255, 255, 0.8);
         padding: 5px 15px 15px 15px;
-        border-radius: 50px;
-        border: 5px solid rgb(56,87,35);
     }
     button {
-        font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-        cursor: pointer;
-        background-color: rgb(157,184,69);
-        width: 33%;
         font-size: 15px;
         color: #fff;
         border: 1px solid rgb(56,87,35);
-        border-radius: 2px;
         padding: 2px 2px;
-        float: right;
-    }
-    button:hover {
-        cursor: pointer;
-        background-color: rgb(56,87,35);
-    }
-    button:focus{
-        outline: none;
     }
 }
 
