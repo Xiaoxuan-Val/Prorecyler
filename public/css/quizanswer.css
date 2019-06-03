@@ -15,11 +15,9 @@ p{
     margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
-    border-radius: 50px;
-    border: 2px solid rgb(56,87,35);
 }
 
-.grid h1 {
+h1 {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     background-color: rgb(56,87,35);
     font-size: 60px;
@@ -30,29 +28,56 @@ p{
 }
 
 
-.grid #tophr {
+#tophr {
     margin-bottom: 30px;
 }
 
-.grid #question {
+#container {
+    display: grid;
+    grid-template-rows: auto 5em auto;
+    grid-template-areas:
+            "area1"
+            "area2";
+}
+
+#area1 {
+    grid-area: area1;
+}
+
+#area2 {
+    grid-area: area2;
+}
+
+
+
+#question {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 26px;
     color: black;
 }
 
-.grid #answer {
+#answer {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: black;
 }
 
-.grid #bottomhr {
+#bottomhr {
     margin-top: 50px;
 }
 
-.buttons {
-    margin-top: 30px;
+#retrybuttons {
+    display: grid;
+    grid-template-areas:
+            "btn0";
 }
+
+#btn0 {
+    grid-area: btn0;
+    justify-self: center;
+}
+
+
 
 #retry{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
@@ -65,6 +90,7 @@ p{
     border-radius: 50px;
     margin: 10px 40px 10px 0px;
     padding: 10px 10px;
+
 }
 
 #retry:hover {

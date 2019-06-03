@@ -10,10 +10,13 @@ block content
             h1 Quiz Answer
             hr#tophr
             each sample in questions
-                .answer
-                    p#question #{"Question: " + sample.question}
-                    p#answer #{"Answer: " + sample.answer}
-                    hr#bottomhr
-            .buttons
-                a(href='/game')
-                    button#retry Retry
+                #container
+                    #area1
+                        p#question #{"Question: " + sample.question}
+                    #area2
+                        p#answer #{"Answer: " + sample.answer}
+                hr#bottomhr
+            #retrybuttons
+                #btn0
+                    a(href='/game')
+                        button#retry Retry
