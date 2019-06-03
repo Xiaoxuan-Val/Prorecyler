@@ -20,7 +20,7 @@ p{
     border: 2px solid rgb(56,87,35);
 }
 
-.grid h1 {
+h1 {
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     background-color: rgb(56,87,35);
     font-size: 60px;
@@ -30,12 +30,58 @@ p{
     border-radius: 50px;
 }
 
-.grid #tophr {
-    margin-bottom: 30px;
+.grid {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(56,87,35);
 }
 
-.grid #bottomhr {
-    margin-top: 50px;
+#quiz {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4em 4em 4em 1fr 4em auto;
+    grid-column-gap: 15px;
+    grid-template-areas:
+            "tophr tophr"
+            "p p"
+            "btn0 btn1"
+            "btn2 btn3"
+            "bottomhr bottomhr"
+            "progress";
+}
+
+#tophr {
+    grid-area: tophr;
+}
+
+#bottomhr {
+    grid-area: bottomhr;
+}
+
+#btn0 {
+    grid-area: btn0;
+}
+
+#btn1 {
+    grid-area: btn1;
+}
+
+#btn2 {
+    grid-area: btn2;
+}
+
+#btn3 {
+    grid-area: btn3;
+}
+
+#progress {
+    grid-area: progress;
+    color: #2b2b2b;
+    font-size: 18px;
 }
 
 .grid #score {
@@ -77,7 +123,3 @@ p{
     outline: 0;
 }
 
-#progress {
-    color: #2b2b2b;
-    font-size: 18px;
-}
