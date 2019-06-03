@@ -93,23 +93,6 @@ var findAllBins = (req, res) => {
     });
 };
 
-
-// show trash page
-var findAllTrashs = (req, res) => {
-    Trash.find((err, trashs) => {
-        if (err) {
-            res.sendStatus(500);
-        } else {
-            // res.send(trash);
-            res.render('alltrash', {
-                title: 'All trash results',
-                user: req.user,
-                trashs: trashs
-            });
-        }
-    });
-};
-
 var findOneTrash = (req, res) => {
     var trashInx = req.params.id;
     Trash.findById(trashInx, (err, trash) => {
@@ -153,45 +136,6 @@ var findTrashs = (req, res) => {
             });
         }
     });
-}
-
-// Add a new user to database
-/*const createTrash = function (req, res) {
-  const user = new User({
-    "name": req.body.name,
-    "email": req.body.email,
-    "password": req.body.password,
-
-  });
-  user.save(function (err, newUser) {
-    if (err) {
-      res.sendStatus(500);
-    } else {
-      res.render('profile', {
-        title: 'Home'
-      });
-
-    }
-  });
-};*/
-
-// Add a new user
-/*const getAddForm = function (req, res) {
-  res.render('useraddform', {
-    title: 'Add User'
-  });
-};*/
-
-
-var Login = function ( req, res){
-    res.render('LoginPage',{
-        title: 'Login'
-    });
-}
-
-var Logout = function (req, res){
-    //handle with passport.js here
-    res.send("Logging out");
 }
 
 var Callback = function (req, res){
@@ -295,9 +239,9 @@ var createBin = function (req, res) {
 }
 
 module.exports = {
-    welcome, Login, Logout, Callback, authCheck, authUser,
+    welcome, Callback, authCheck, authUser,
     addTrash, createTrash, addBin, createBin, 
     game, showTips, findAllQuestion, createQuestion, showAnswer,
     showMaps, findAllBins,
-    findAllTrashs, findOneTrash, findTrashs,
+    findOneTrash, findTrashs,
 };
