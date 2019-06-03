@@ -10,7 +10,7 @@ p{
     font-size: 13px;
 }
 
-.quizanswergrid {
+.quizanswer-container {
     width: 600px;
     margin: 0 auto;
     background-color: #fff;
