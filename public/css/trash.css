@@ -26,7 +26,6 @@ p{
 #container {
     display: grid;
     height: calc(100vh - 53.6px);
-    grid-template-columns: 2fr 3fr;
     grid-template-areas:
             "words pic";
 }
@@ -94,4 +93,28 @@ p{
     grid-area: image;
     margin: auto;
     overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px){
+    #container {
+        display: grid;
+        grid-template-areas:
+                "words";
+    }
+    #info-con {
+        display: grid;
+        grid-area: words;
+        width: calc(100vw);
+        grid-template-areas:
+                "info";
+    }
+
+    #pic-con {
+        visibility: hidden;
+        height: 0;
+    }
+
+    #pic {
+        visibility: hidden;
+    }
 }
