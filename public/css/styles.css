@@ -21,7 +21,8 @@ body{
 
 .nav-menu {
     grid-area: nev;
-    height: 53.6px;
+    min-width: 726px;
+    height: 100%;
     background-color: rgb(56,87,35);
 }
 
