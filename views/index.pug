@@ -4,8 +4,9 @@ block css
     link(rel='stylesheet', href='/css/index.css')
 
 block content
-    #logo
-    #search-bar
-        form(method='POST' action='/trashs/find')
-            input(type='text', placeholder='Search trash' name='search')
-            button#search-bar-submit(type='submit')
+    .index-container
+        #container
+            #logo
+            form#bar(method='POST' action='/trashs/find')
+                input#input(type='text', placeholder='Search trash' name='search')
+                button#submit(type='submit')

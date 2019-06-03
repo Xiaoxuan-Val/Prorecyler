@@ -16,24 +16,35 @@ p{
     font-size: 26px;
 }
 
-.grid {
+.trashgrid {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    margin: 0 auto;
+
 }
 
 #container {
     display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 2fr;
+    justify-items: stretch;
+    grid-template-columns: 2fr 3fr;
     grid-template-areas:
-            "info pic";
+            "words pic";
+}
+
+#words {
+    display: grid;
+    background-color: rgb(84, 130, 53);
+    grid-area: words;
+    grid-template-areas:
+            "info";
 }
 
 #info {
-    background-color: rgb(84, 130, 53);
+    grid-area: info;
     display: grid;
-    justify-items: center;
-    grid-template-rows: 10em 7em 5em 7em 5em auto;
+    justify-self: center;
+    padding: 10px 50px 50px 50px;
+    grid-template-rows: auto 7em 5em 7em 5em;
     grid-template-areas:
             "title"
             "type-title"
@@ -45,24 +56,30 @@ p{
 
 #title{
     grid-area: title;
+    justify-self: center;
 }
 
 #type-title{
     grid-area: type-title;
+    justify-self: center;
 }
 
 #type{
     grid-area: type;
+    justify-self: center;
 }
 
 #process-title{
     grid-area: process-title;
+    justify-self: center;
 }
 
 #process{
     grid-area: process;
+    justify-self: center;
 }
 
 #pic{
     grid-area: pic;
+    place-self: center;
 }

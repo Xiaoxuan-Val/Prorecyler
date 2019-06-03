@@ -5,15 +5,12 @@ block css
     link(rel='stylesheet', href='/css/quizanswer.css')
 
 block content
-    .grid
-        #answer-content
-            h1 Quiz Answer
-            hr#tophr
-            each sample in questions
-                .answer
-                    p#question #{"Question: " + sample.question}
-                    p#answer #{"Answer: " + sample.answer}
-                    hr#bottomhr
-            .buttons
-                a(href='/game')
-                    button#retry Retry
+    #content
+        h1 Quiz Answer
+        hr
+        each sample in questions
+            p#question #{"Question: " + sample.question}
+            p#answer #{"Answer: " + sample.answer}
+            hr
+        a(href='/game')
+            button#retry Retry
