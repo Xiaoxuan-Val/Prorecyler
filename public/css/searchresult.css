@@ -1,8 +1,14 @@
-body {
-    background-color: rgb(84, 130, 53);
+h1 {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(56,87,35);
+    font-size: 60px;
+    color: white;
+    padding: 10px 50px 10px 50px;
+    border-radius: 50px;
+    text-align: center;
 }
 
-h1{
+h2{
     text-decoration: none;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 39px;
@@ -14,118 +20,87 @@ p{
     font-size: 26px;
 }
 
-#search{
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    left: 15%;
-    width: 70%;
-    height: 100%;
+.searchresult-container{
+    margin: 5% 20% 5% 20%;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 5px solid rgb(56,87,35);
 }
 
-#result{
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom:15%;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    top: 50%;
+#container{
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+            "title"
+            "bar"
+            "result";
 }
 
-#logo{
-    display: block;
-    background-image: url(../images/LogoSmall.png);
-    background-repeat: no-repeat;
-    top: 20px;
-    bottom: 50px;
-    width: 643px;
-    height: 146px;
-    left: calc(50% - 643px/2);
-    position: absolute;
+#title{
+    grid-area: title;
 }
 
-#search-bar{
-    background-image: url(../images/SearchBar.png);
-    background-repeat: no-repeat;
-    top: 200px;
-    width: 668px;
-    height: 69px;
-    left: calc(50% - 668px/2);
-    position: absolute;
+#bar {
+    grid-area: bar;
+    background-color: #fff;
+    padding: 1% 2.5% 1% 2.5%;
+    border-radius: 50px;
+    border: 5px solid rgb(56,87,35);
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 13fr 1fr;
+    grid-template-areas:
+            "input submit";
 }
 
-input{
-    top: 10px;
-    width: 540px;
-    height: 50px;
-    left: 35px;
+#input {
+    grid-area: input;
+    padding: 6.5px 0px 0px 0px;
     border: none;
     background: transparent;
     position: absolute;
     color: rgb(56,87,35);
     font-size: 26px;
 }
-input:focus{
-    outline: none;
-}
-input:active{
-    outline: none;
-}
 
-#search-bar-submit{
+#submit {
+    grid-area: submit;
     cursor: pointer;
     background: transparent;
     border: none;
     background-image: url(../images/Magnifier.png);
     background-repeat: no-repeat;
-    top: 14px;
     width: 42px;
     height: 42px;
-    left: calc(50% + 668px/2 - 42px/2 - 42px);
-    position: absolute;
 }
 
-#search-bar-submit:hover{
+#input:focus{
+    outline: none;
+}
+
+#input:active{
+    outline: none;
+}
+
+#submit:hover{
     background-image: url(../images/MagnifierHover.png);
 }
-#search-bar-submit:focus{
+
+#submit:focus{
     opacity: 1;
     background-image: url(../images/Magnifier.png);
     outline: none;
 }
-#search-bar-submit:active{
+
+#submit:active{
     opacity: 0.6;
     background-image: url(../images/Magnifier.png);
     outline: none;
 }
 
-#search-stat{
-    position: absolute;
-    top: calc(5% + 127px/2);
-    left: 545px;
-}
-
-#show-all-trash-button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    background-image: url(../images/ShowAllTrash.png);
-    background-repeat: no-repeat;
-    top: 300px;
-    width: 224px;
-    height: 52px;
-    left: calc(50% - 224px - 20px);
-    position: absolute;
-}
-
-#add-own-data-button{
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    background-image: url(../images/AddMyOwnData.png);
-    background-repeat: no-repeat;
-    top: 300px;
-    width: 224px;
-    height: 52px;
-    left: calc(50% + 20px);
-    position: absolute;
+#result{
+    grid-area: result;
+    padding: 2.5% 5% 2.5% 5%;
 }

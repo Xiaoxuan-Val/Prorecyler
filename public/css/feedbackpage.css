@@ -4,17 +4,10 @@ p{
     text-align: center;
 }
 
-.feedback_container{
+#content{
     width: 600px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 50px;
-    border: 2px solid rgb(56,87,35);
-    display: grid;
-    grid-template-areas: 
-        "content";
-}
-
-#content {
-    grid-area: content;
+    border: 5px solid rgb(56,87,35);
 }

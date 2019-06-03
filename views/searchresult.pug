@@ -4,22 +4,17 @@ block css
     link(rel='stylesheet', href='/css/searchresult.css')
 
 block content
-    .grid
+    .searchresult-container
         #container
-            #logo
-            #search
-            #search-bar
-                form(method='POST' action='/trashs/find')
-                    input(type='text', placeholder='Search trash' name='search')
-                    button#search-bar-submit(type='submit')
-            a(href='/trashs')
-                button#show-all-trash-button
-            a(href='/auth/usercenter')
-                button#add-own-data-button
+            #title
+                h1 Pro Search
+            form#bar(method='POST' action='/trashs/find')
+                input#input(type='text', placeholder='Search trash' name='search')
+                button#submit(type='submit')
             #result
-                p #{resultcount} results found. You can also add data to our database.
+                p #{resultcount} results found.
+                p You can also add data to our database via User Centre.
                 each trash in trashs
-                    #result-content
-                        a(href=`/trashs/${trash.id}`)
-                            h1 #{trash.name}
-                        p Type: #{trash.type}
+                    a(href=`/trashs/${trash.id}`)
+                        h2 #{trash.name}
+                    p Type: #{trash.type}
