@@ -226,7 +226,7 @@ var createTrash = (req, res) => {
     var inputname = req.body.name.toLowerCase()
     var inputtype = req.body.type
 
-    if (inputname == null || inputtype == null) {
+    if (inputname == null || inputname == "" || inputtype == null) {
         res.render('SorryPage', {
             title: 'Error input',
             user: req.user
