@@ -23,16 +23,24 @@ p{
 
 #container {
     display: grid;
-    justify-items: center;
+    justify-items: stretch;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-            "info pic";
+            "words pic";
+}
+
+#words {
+    display: grid;
+    background-color: rgb(84, 130, 53);
+    grid-area: words;
+    grid-template-areas:
+            "info";
 }
 
 #info {
-    background-color: rgb(84, 130, 53);
+    grid-area: info;
     display: grid;
-    justify-items: center;
+    justify-self: center;
     grid-template-rows: 10em 7em 5em 7em 5em auto;
     grid-template-areas:
             "title"
@@ -65,4 +73,5 @@ p{
 
 #pic{
     grid-area: pic;
+    place-self: center;
 }
