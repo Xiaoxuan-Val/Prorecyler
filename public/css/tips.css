@@ -1,12 +1,8 @@
-body {
-    background-color: rgb(84, 130, 53);
-}
-
 h1{
     text-decoration: none;
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 78px;
-    color: rgb(84, 130, 53);
+    color: black;
 }
 
 p{
@@ -16,13 +12,16 @@ p{
 
 .grid {
     margin: 5% 5% 5% 5%;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 5px solid rgb(56,87,35);
 }
 
 #container{
     display: grid;
     justify-items: center;
     background-color: #fff;
-    opacity:0.8;
     grid-template-columns: 2fr 3fr;
     grid-template-areas:
             "title title"

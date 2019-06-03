@@ -16,12 +16,11 @@ hr{
 }
 
 .grid {
-    width: 650px;
-    margin: 0 auto;
+    margin: 5% 20% 5% 20%;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
-    border: 2px solid rgb(56,87,35);
+    border: 5px solid rgb(56,87,35);
 }
 
 #container {
