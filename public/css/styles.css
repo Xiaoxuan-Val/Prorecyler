@@ -12,7 +12,15 @@ body{
     background-size: 100%;
 }
 
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "nev"
+    "body";
+}
+
 .nav-menu {
+    grid-area: nev;
     height: 53.6px;
     background-color: rgb(56,87,35);
 }
@@ -63,5 +71,7 @@ li a:hover {
 }
 
 .content {
-    grid-area: body
+    grid-area: body;
+    margin: 0;
+    padding: 0;
 }
