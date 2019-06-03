@@ -15,7 +15,8 @@ router.get('/google', passport.authenticate('google', {
 //callback route for google to redirect to
 router.get('/google/redirect', passport.authenticate('google'), controller.Callback);
 //redirect page
-router.get('/profile', controller.authCheck, controller.Profile);
+// router.get('/profile', controller.authCheck, controller.Profile);
+
 //user center page
 router.get('/usercenter', controller.authUser);
 //user get add trash form

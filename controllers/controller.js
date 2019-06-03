@@ -82,27 +82,6 @@ var findAllBins = (req, res) => {
     });
 };
 
-// var findOneBin = function (req, res) {
-//     var binInx = req.params.id;
-//     Bin.findById(binInx, function (err, bin) {
-//         if (err) {
-//             res.sendStatus(404);
-//         } else {
-//             res.send(bin);
-//         }
-//     });
-// };
-
-// var findBinByType = function (req, res) {
-//     var binType = req.params.type.toLowerCase();
-//     Bin.find({ type: binType }, function (err, bins) {
-//         if (err) {
-//             res.sendStatus(404);
-//         } else {
-//             res.send(bins);
-//         }
-//     });
-// };
 
 // show trash page
 var findAllTrashs = (req, res) => {
@@ -200,9 +179,6 @@ var Callback = function (req, res){
     //res.send(req.user);
     res.redirect('/auth/profile/');
 }
-var Profile = function (req, res){
-    res.render('profile',{user: req.user});
-}
 
 const authCheck = (req,res, next) => {
     if(!req.user){
@@ -288,7 +264,7 @@ var createBin = function (req, res) {
 }
 
 module.exports = {
-    welcome, Login, Logout, Callback, Profile, authCheck, authUser,
+    welcome, Login, Logout, Callback, authCheck, authUser,
     addTrash, createTrash, addBin, createBin, 
     game, showTips, findAllQuestion, createQuestion, showAnswer,
     showMaps, findAllBins,
