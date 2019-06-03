@@ -105,3 +105,103 @@ button:hover {
 button:focus{
     outline: none;
 }
+
+
+@media screen and (min-width: 1000px){
+    .addbin-container {
+        margin: 5% 20% 5% 20%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 50px 50px 50px;
+        border-radius: 50px;
+        border: 5px solid rgb(56,87,35);
+    }
+    button {
+        font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        background-color: rgb(157,184,69);
+        width: 33%;
+        font-size: 20px;
+        color: #fff;
+        border: 1px solid rgb(56,87,35);
+        border-radius: 10px;
+        padding: 10px 10px;
+        float: right;
+
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(56,87,35);
+    }
+    button:focus{
+        outline: none;
+    }
+
+}
+
+@media screen and (min-width: 520px) and (max-width: 1000px){
+    .addbin-container {
+        margin: 5% 20% 5% 20%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 50px 50px 50px;
+        border-radius: 50px;
+        border: 5px solid rgb(56,87,35);
+    }
+    button {
+        font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        background-color: rgb(157,184,69);
+        width: 33%;
+        font-size: 15px;
+        color: #fff;
+        border: 1px solid rgb(56,87,35);
+        border-radius: 10px;
+        padding: 10px 10px;
+        float: right;
+
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(56,87,35);
+    }
+    button:focus{
+        outline: none;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px){
+    .addbin-container {
+        margin: 1% 4% 1% 4%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 50px 50px 50px;
+        border-radius: 50px;
+        border: 5px solid rgb(56,87,35);
+    }
+    button {
+        font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        background-color: rgb(157,184,69);
+        width: 33%;
+        font-size: 10px;
+        color: #fff;
+        border: 1px solid rgb(56,87,35);
+        border-radius: 10px;
+        padding: 10px 10px;
+        float: right;
+
+    }
+    input {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(56,87,35);
+        width: 100%; /* Full width */
+        height: 42px;
+        padding: 3px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 1px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 2px; /* Add a top margin */
+        margin-bottom: 4px; /* Bottom margin */
+    }
+}
