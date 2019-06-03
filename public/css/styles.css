@@ -19,11 +19,16 @@ body{
     "body";
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .welcome {
+        display: none;
+    }
+}
+
 .nav-menu {
-    grid-area: nev;
-    min-width: 726px;
-    height: 100%;
-    background-color: rgb(56,87,35);
+        grid-area: nev;
+        height: 100%;
+        background-color: rgb(56,87,35);
 }
 
 .nav-con {
