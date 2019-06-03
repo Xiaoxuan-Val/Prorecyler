@@ -25,33 +25,32 @@ p{
 
 #container {
     display: grid;
-    justify-items: stretch;
+    height: calc(100vh - 53.6px);
     grid-template-columns: 2fr 3fr;
     grid-template-areas:
             "words pic";
 }
 
-#words {
+#info-con {
     display: grid;
-    background-color: rgb(84, 130, 53);
+    background-color: rgba(84, 130, 53, 0.9);
     grid-area: words;
     grid-template-areas:
-            "info";
+        "info";
 }
 
 #info {
     grid-area: info;
     display: grid;
+    margin: 30px auto;
     justify-self: center;
-    padding: 10px 50px 50px 50px;
-    grid-template-rows: auto 7em 5em 7em 5em;
+    grid-template-rows: 10em 7em 5em 7em 5em;
     grid-template-areas:
             "title"
             "type-title"
             "type"
             "process-title"
-            "process"
-            "background";
+            "process";
 }
 
 #title{
@@ -75,11 +74,24 @@ p{
 }
 
 #process{
+    margin: 0 25px;
     grid-area: process;
     justify-self: center;
 }
 
-#pic{
+#pic-con {
     grid-area: pic;
-    place-self: center;
+    width: 100%;
+    height: calc(100vh - 53.6px);
+    background-color: rgba(255, 255, 255);
+    opacity: 0.8;
+    display: grid;
+    grid-template-areas:
+        "image";
+}
+
+#pic {
+    grid-area: image;
+    margin: auto;
+    overflow: hidden;
 }

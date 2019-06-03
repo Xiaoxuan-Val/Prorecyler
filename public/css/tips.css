@@ -13,6 +13,7 @@ p{
 .protips-container {
     margin: 5% 5% 5% 5%;
     background-color: #fff;
+    opacity: 0.8;
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
     border: 5px solid rgb(56,87,35);

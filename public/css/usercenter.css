@@ -1,10 +1,3 @@
-body {
-    background-image: url(../images/Background.png);
-    position: relative;
-    background-repeat: repeat;
-    background-size: 100%;
-}
-
 h1{
     font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
     font-size: 39px;
@@ -17,7 +10,7 @@ hr{
 
 .usercentre-container{
     margin: 5% 20% 5% 20%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
     border: 5px solid rgb(56,87,35);
@@ -29,8 +22,7 @@ hr{
     grid-template-areas:
             "btn0"
             "btn1"
-            "btn2"
-            "btn3";
+            "btn2";
 }
 
 #btn0 {
@@ -43,10 +35,6 @@ hr{
 
 #btn2 {
     grid-area: btn2;
-}
-
-#btn3 {
-    grid-area: btn3;
 }
 
 button {
