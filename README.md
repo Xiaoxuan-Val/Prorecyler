@@ -1,16 +1,17 @@
 # INFO30005-F4 Prorecycler Deliverable 4
-We are group F4, and our project is "prorecycler".
+This is an assignment for subject INFO30005 Web Information Technology.
+We are group F4. Our project is "prorecycler", a website aims providing information for users to help them recycle their daily rubbish.
 
 ## Features
 ### Core Functions
 
 1. User
 
-    a. User can click the login botton and this would directly link to the google login page and if the user have google account, user could login the website using google account
+    a. Login: In home page there is a login botto, and by clicking the login botton, user would be redirected to the google login page. User could login the website using google account.
 
-    b. After log in, user can enter user center to add trash/bin data
+    b. User Center: After log in, user can enter user center to add trash/bin data.
 
-    c. when user click the pro tips button, it could comes out random tips form mongodb and flash the page can show different tips with images.
+    c. Check tips: when user click the pro tips button, it could comes out random tips form mongodb and flash the page can show different tips with images.
 
 2. Search
 
