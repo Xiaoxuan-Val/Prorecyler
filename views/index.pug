@@ -1,0 +1,12 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/index.css')
+
+block content
+    .index-container
+        #container
+            #logo
+            form#bar(method='POST' action='/trashs/find')
+                input#input(type='text', placeholder='Search trash' name='search')
+                button#submit(type='submit')

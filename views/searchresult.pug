@@ -1,0 +1,20 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/searchresult.css')
+
+block content
+    .searchresult-container
+        #container
+            #title
+                h1 Pro Search
+            form#bar(method='POST' action='/trashs/find')
+                input#input(type='text', placeholder='Search trash' name='search')
+                button#submit(type='submit')
+            #result
+                p #{resultcount} results found.
+                p You can also add data to our database via User Centre.
+                each trash in trashs
+                    a(href=`/trashs/${trash.id}`)
+                        h2 #{trash.name}
+                    p Type: #{trash.type}

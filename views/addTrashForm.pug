@@ -1,0 +1,24 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/addtrash.css')
+
+block content
+    .addtrash-container
+        h1 Trash Info Form
+        hr
+        form#addform(method='POST' action='/auth/usercenter/saveTrash')
+            #name
+                input#name-input(type='text', placeholder='Enter trash name (Required)' name='name')
+            #type
+                select#type-input(name='type')
+                    option(value="" disabled selected) Select trash type (Required)
+                    option recyclable
+                    option landfilled
+                    option e-waste
+            #pic
+                input(type='text', placeholder='Enter picture link' name='pic')
+            #process
+                textarea(placeholder='Describe how to process it' name='process')
+            #submit
+                button(type="submit") Submit

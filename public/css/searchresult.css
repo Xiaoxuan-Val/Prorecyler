@@ -1,0 +1,173 @@
+@media screen and (min-width: 1000px) {
+    .searchresult-container {
+        margin: 5% 20%;
+        padding: 10px 50px 50px 50px;
+    }
+    h1{
+        font-size: 60px;
+        padding: 10px 50px 10px 50px;
+    }
+    h2{
+        font-size: 39px;
+    }
+    p{
+        font-size: 26px;
+    }
+    #bar {
+        padding: 1% 2.5% 1% 2.5%;
+        border: 5px solid rgb(56,87,35);
+        grid-template-columns: 13fr 1fr;
+    }
+
+    #input {
+        font-size: 39px;
+        padding: 6.5px 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1000px) {
+    .searchresult-container {
+        margin: 5% 10%;
+        padding: 7px 30px 30px 30px;
+    }
+    h1{
+        font-size: 45px;
+        padding: 10px 50px 10px 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+    #bar {
+        padding: 1% 2.5% 1% 2.5%;
+        border: 4px solid rgb(56,87,35);
+        grid-template-columns: 11fr 1fr;
+    }
+    #input {
+        font-size: 20px;
+        padding: 8px 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px) {
+    .searchresult-container {
+        margin: 5% 5%;
+        padding: 4px 10px 10px 10px;
+    }
+    h1{
+        font-size: 30px;
+        padding: 10px 50px 10px 50px;
+    }
+    h2{
+        font-size: 21px;
+    }
+    p{
+        font-size: 14px;
+    }
+    #bar {
+        border: 3px solid rgb(56,87,35);
+        grid-template-columns: 5fr 1fr;
+    }
+    #input {
+        font-size: 14px;
+        padding: 12px 0px 0px 15px;
+    }
+}
+
+h1 {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(56,87,35);
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+}
+
+h2{
+    text-decoration: none;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    color: rgb(84, 130, 53);
+}
+
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+}
+
+.searchresult-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    border: 5px solid rgb(56,87,35);
+}
+
+#container{
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+            "title"
+            "bar"
+            "result";
+}
+
+#title{
+    grid-area: title;
+}
+
+#bar {
+    grid-area: bar;
+    background-color: #fff;
+    border-radius: 50px;
+
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+            "input submit";
+}
+
+#input {
+    grid-area: input;
+    border: none;
+    background: transparent;
+    position: absolute;
+    color: rgb(56,87,35);
+}
+
+#submit {
+    grid-area: submit;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-image: url(../images/Magnifier.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+}
+
+#input:focus{
+    outline: none;
+}
+
+#input:active{
+    outline: none;
+}
+
+#submit:hover{
+    background-image: url(../images/MagnifierHover.png);
+}
+
+#submit:focus{
+    opacity: 1;
+    background-image: url(../images/Magnifier.png);
+    outline: none;
+}
+
+#submit:active{
+    opacity: 0.6;
+    background-image: url(../images/Magnifier.png);
+    outline: none;
+}
+
+#result{
+    grid-area: result;
+    padding: 2.5% 5% 2.5% 5%;
+}

@@ -1,0 +1,229 @@
+@media screen and (min-width: 769px) {
+    #quiz {
+        margin: 30px auto;
+        width: 600px;
+        padding: 10px 50px 50px 50px;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 8em 9em 9em;
+        grid-template-areas:
+                "question question"
+                "btn0 btn1"
+                "btn2 btn3";
+    }
+    h1{
+        font-size: 60px;
+    }
+
+    #score {
+        font-size: 26px;
+    }
+
+    #question {
+        font-size: 26px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 20px;
+        border-radius: 50px;
+    }
+    
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 120px;
+        width: 250px;
+    }
+
+    #retry, #answer {
+        height: 65px;
+        width: 160px;
+    }
+    #progress {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 768px) {
+    #quiz {
+        margin: 20px auto;
+        width: 400px;
+        padding: 10px 50px 50px 50px;
+    }
+
+    #container {
+        display: grid;
+        grid-template-rows: 5em 5em 5em 5em 5em;
+        grid-template-areas:
+            "question"
+            "btn0"
+            "btn1"
+            "btn2"
+            "btn3";
+    }
+
+    #question {
+        font-size: 20px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    #score {
+        font-size: 24px;
+    }
+
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 70px;
+        width: 250px;
+        border-radius: 30px;
+    }
+
+    #retry, #answer {
+        height: 65px;
+        width: 120px;
+        border-radius: 50px;
+    }
+    #progress {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 520px) {
+    #quiz {
+        margin: 10px auto;
+        width: 250px;
+        padding: 10px 15px;
+    }
+    #container {
+        display: grid;
+        grid-template-rows: 4.5em 3.8em 3.8em 3.8em 3.8em;
+        grid-template-areas:
+            "question"
+            "btn0"
+            "btn1"
+            "btn2"
+            "btn3";
+    }
+    h1{
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    #score {
+        font-size: 18px;
+    }
+
+    #question {
+        font-size: 14px;
+    }
+    #btn0, #btn1, #btn2, #btn3, #retry, #answer {
+        font-size: 12px;
+    }
+    #btn0, #btn1, #btn2, #btn3 {
+        height: 50px;
+        width: 200px;
+        border-radius: 30px;
+    }
+
+    #retry, #answer {
+        height: 30px;
+        width: 100px;
+        border-radius: 30px;
+    }
+    #progress {
+        font-size: 12px;
+    }
+
+    hr{
+        display: none;
+    }
+}
+
+#quiz {
+    border: 5px solid rgb(56,87,35);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    background-color: rgba(56, 87, 35, 0.9);
+    text-align: center;
+    color: white;
+    padding: 2px 0px;
+    border-radius: 50px;
+}
+
+#bottomhr {
+    margin-top: 30px;
+}
+
+#btn0 {
+    grid-area: btn0;
+}
+
+#btn1 {
+    grid-area: btn1;
+}
+
+#btn2 {
+    grid-area: btn2;
+}
+
+#btn3 {
+    grid-area: btn3;
+}
+
+#score, #question {
+    color: black;
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#question {
+    grid-area: question;
+    margin: auto;
+}
+
+#btn0, #btn1, #btn2, #btn3, #retry, #answer {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: rgb(157,184,69);
+    color: #fff;
+    border: 1px solid rgb(56,87,35);
+    margin: auto;
+}
+
+#buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "retry answer";
+}
+
+#retry {
+    grid-area: retry;
+}
+
+#answer {
+    grid-area: answer;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover, #retry:hover, #answer:hover {
+    cursor: pointer;
+    background-color: rgb(56,87,35);
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus, #retry:focus, #answer:focus {
+    outline: 0;
+}
+
+#progress {
+    color: #2b2b2b;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,15 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/quizanswer.css')
+
+block content
+    #content
+        h1 Quiz Answer
+        hr
+        each sample in questions
+            p#question #{"Question: " + sample.question}
+            p#answer #{"Answer: " + sample.answer}
+            hr
+        a(href='/game')
+            button#retry Retry

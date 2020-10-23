@@ -1,0 +1,24 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/game.css')
+
+block content
+    #quiz
+        h1 Quiz
+        hr#tophr
+        #container
+            p#question
+            button#btn0
+                span#choice0
+            button#btn1
+                span#choice1
+            button#btn2
+                span#choice2
+            button#btn3
+                span#choice3
+        hr#bottomhr
+        footer
+            p#progress Question idx of total
+    script
+        include game.js

@@ -1,0 +1,13 @@
+p{
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    font-size: 39px;
+    text-align: center;
+}
+
+#content{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 5px solid rgb(56,87,35);
+}

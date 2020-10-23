@@ -1,0 +1,14 @@
+extend default
+
+block css
+    link(rel='stylesheet', href='/css/tips.css')
+
+block content
+    .protips-container
+        #container
+            #title
+                h1 Pro Tips
+            #content
+                p #{tip.content}
+            #pic
+                img.image(src = tip.pic)
