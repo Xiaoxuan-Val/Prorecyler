@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Montserrat&display=swap');
+
+.bgimg {
+    max-width:100%;
+    height: auto;
+    background-size: cover;
+}
+
+.profileBox {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    background-color: chocolate;
+    border: orange;
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    align-items: center;
+    height: 200px;
+    opacity: 0.8;
+}
+
+.profileText {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.loginButton {
+    background-color: sandybrown;
+    border: none;
+    opacity: 1;
+    border-radius: 50px;
+    cursor: pointer;
+}
+  
+.loginButton:hover {
+    background-color: #A94E0D;
+}

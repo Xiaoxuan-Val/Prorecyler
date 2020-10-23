@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App-header {
+  background-color: chocolate;
+  display: flex;
+  align-items: center;
+  padding: 30px 10%;
+  position: relative;
+  justify-content: flex-end;
+  border-bottom: 5px solid burlywood;
+}
+
+.home {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  color: snow;
+  margin-right: auto;
+}
+
+.home:hover {
+  color: #ffaf76;
+}
+
+.App-header li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: snow;
+  text-decoration: none;
+}
+
+.navbarlinks {
+  list-style: none;
+}
+
+.navbarlinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navbarlinks li a {
+  transition: all 0.3s ease 0s;
+}
+
+.navbarlinks li a:hover {
+  color: #ffaf76;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: sandybrown;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #a94e0d;
+}
+
+.contentWrapper {
+  min-height: 100%;
+  background-color: white;
+}
+
+footer {
+  bottom: 0;
+  max-height: 300px;
+}
+
+.footer-distributed {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 55px 50px;
+  background-color: chocolate;
+  border-top: 5px solid burlywood;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+.logo {
+  font-family: "Josefin Sans", sans-serif;
+  color: snow;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-right ul {
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  color: snow;
+}
+
+.footerDesc {
+  font-family: "Montserrat", sans-serif;
+  color: snow;
+}
+
+.copyright {
+  font-family: "Montserrat", sans-serif;
+  color: snow;
+}
